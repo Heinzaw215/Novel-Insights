@@ -15,7 +15,7 @@ const Main = () => {
             Dive into insightful reviews, uncover hidden gems, and explore the world of literature like never before.
           </p>
           <Link
-            href="/books"
+            href="/book"
             className="mt-10 inline-block bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded shadow-lg transition duration-300 ease-in-out"
           >
             Explore Books
