@@ -66,6 +66,5 @@ A modern and visually appealing web application for book enthusiasts to explore 
 
 ### Screenshots:
 - **Landing Page**: A beautiful introduction with a call-to-action button to explore books.
-[Landing Page](/Header-Background.jpg "This is a landing page.")
-![Landing Page](/Header-Background.jpg "This is a landing page.")
+- ![Landing Page](/Header-Background.jpg "This is a landing page.")
 - **Book Collection**: A grid layout displaying detailed book cards with hover effects.
