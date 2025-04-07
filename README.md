@@ -7,13 +7,13 @@ A modern and visually appealing web application for book enthusiasts to explore 
 - **Landing Page**:  
   A welcoming introduction with a visually stunning background and smooth animations to engage users.
 
-- **Book Collection**:  
+- **Book Collection**: 'Not so great yet'  
   A dynamic grid layout showcasing a curated collection of books with detailed information, including author, release date, categories, description, rating, and availability.
 
-- **Responsive Design**:  
+- **Responsive Design**:  'Still working on'
   Fully responsive layout that adapts to different screen sizes, ensuring a great user experience on both desktop and mobile devices.
 
-- **Interactive Animations**:  
+- **Interactive Animations**:  'Still working on'
   Subtle animations for typography and hover effects to enhance user engagement.
 
 - **Reusable Components**:  
