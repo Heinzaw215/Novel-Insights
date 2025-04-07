@@ -1,9 +1,11 @@
-**Novel Insights**  
+# Novel Insights
+
 A modern and visually appealing web application for book enthusiasts to explore and discover their next favorite reads. Built with **Next.js** and **Tailwind CSS**, this project provides a seamless user experience with responsive design, animations, and a clean UI.
 
 ---
 
-### Features:
+## Features
+
 - **Landing Page**:  
   A welcoming introduction with a visually stunning background and smooth animations to engage users.
 
@@ -21,7 +23,8 @@ A modern and visually appealing web application for book enthusiasts to explore 
 
 ---
 
-### Tech Stack:
+## Tech Stack
+
 - **Next.js**:  
   A React framework for server-side rendering and static site generation.
 
@@ -33,38 +36,50 @@ A modern and visually appealing web application for book enthusiasts to explore 
 
 ---
 
-### How to Run:
+## How to Run
+
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/HeinzZaw215/novel-insights.git
+   git clone https://github.com/Heinzaw215/Novel-Insights.git
    ```
+
 2. Navigate to the project directory:
+
    ```bash
    cd novel-insights
    ```
+
 3. Install dependencies:
+
    ```bash
    npm install
    ```
+
 4. Start the development server:
+
    ```bash
    npm run dev
    ```
+
 5. Open your browser and visit:
-   ```
+
+   ```bash
    http://localhost:3000
    ```
 
 ---
 
-### Future Enhancements:
+## Future Enhancements
+
 - Add user authentication for personalized book recommendations.
 - Implement a search and filter feature for easier book discovery.
 - Add a review and rating system for users to share their thoughts on books.
 
 ---
 
-### Screenshots:
+## Screenshots
+
 - **Landing Page**: A beautiful introduction with a call-to-action button to explore books.
 - ![Landing Page](/Header-Background.jpg "This is a landing page.")
 - **Book Collection**: A grid layout displaying detailed book cards with hover effects.
