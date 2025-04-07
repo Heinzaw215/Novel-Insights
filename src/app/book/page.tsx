@@ -23,6 +23,7 @@ const MainBookPage = () => {
               width={200}
               height={400}
               className="w-full h-64 object-cover rounded-md mb-4"
+              loading='lazy'
             />
             <h2 className="text-xl font-bold mb-4 text-gray-800 text-center">{book.name}</h2>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-gray-600">
