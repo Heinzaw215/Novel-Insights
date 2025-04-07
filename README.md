@@ -36,7 +36,7 @@ A modern and visually appealing web application for book enthusiasts to explore 
 ### How to Run:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/novel-insights.git
+   git clone https://github.com/HeinzZaw215/novel-insights.git
    ```
 2. Navigate to the project directory:
    ```bash
