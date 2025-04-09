@@ -159,8 +159,8 @@ export const BookList: Book[] = [
   { // Book 14 (The series of unfortunate events - The Bad Beginning)
     id: 14,
     name: "The series of unfortunate events - The Bad Beginning",
-    bookcover: "/a-series-of-unfortunate-events-#1_the-bad-beginning.jpg",
-    author: "Lemony Snicket",
+    bookcover: "/a-series-of-unfortunate-events-1-the-bad-beginning.jpg",
+    author: "Lemony Snicket", 
     releasedDate: 1999,
     catagories: ["Adventure", "Mystery"],
     description: "A darkly humorous tale of three orphans and their misadventures with a villainous guardian.",

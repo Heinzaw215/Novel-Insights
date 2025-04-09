@@ -1,4 +1,5 @@
-import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
+import NavBar from '@/components/navBar/NavBar'
 import React, { ReactNode } from 'react'
 
 const layout = ({ children }: { children: ReactNode }) => {
@@ -6,6 +7,7 @@ const layout = ({ children }: { children: ReactNode }) => {
     <div>
       <NavBar />
       {children}
+      <Footer />
     </div>
   )
 }
