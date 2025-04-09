@@ -38,7 +38,7 @@ const MainBookPage = () => {
               src={book.bookcover}
               alt={book.name}
               width={200}
-              height={400}
+              height={600}
               className="w-full h-64 object-cover rounded-md mb-4"
               loading="lazy"
               placeholder="blur"
