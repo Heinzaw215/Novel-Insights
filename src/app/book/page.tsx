@@ -1,20 +1,12 @@
 "use client";
 // components/MainBookPage.tsx
-import { useState, useEffect } from 'react';
-import LoadingSpinner from '../../components/BookCard/LoadingSpinner';
-import BookList from '../../components/BookCard/BookList';
-import { BookList as books } from './db';
+import useLoading from '@/hooks/isLoading';
+import LoadingSpinner from './loading';
+import BookList from '@/components/BookCard/BookList';
+import { BookList as booksFromDB } from './db';
 
 const MainBookPage = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const isLoading = useLoading(1000);
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -28,7 +20,7 @@ const MainBookPage = () => {
       <p className="text-lg text-gray-700 mt-4 mb-8 text-center max-w-2xl px-4">
         Discover your next favorite book from our curated collection. Browse through genres, authors, and more.
       </p>
-      <BookList books={books} />
+      <BookList books={booksFromDB} />
     </div>
   );
 };

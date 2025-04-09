@@ -1,5 +1,6 @@
 // components/BookCard.tsx
 import Image from 'next/image';
+import Link from 'next/link';
 
 type Book = {
   id: number;
@@ -50,9 +51,9 @@ const BookCard = ({ book }: BookCardProps) => {
         <span className="font-bold">Available:</span>
         <p>{book.isAvailable ? 'Yes' : 'No'}</p>
       </div>
-      <button className="mt-4 w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded transition duration-300 hover:scale-105">
+      <Link href={`/book/${book.id}`} className="mt-4 w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded transition duration-300 hover:scale-105">
         View Details
-      </button>
+      </Link>
     </div>
   );
 };
