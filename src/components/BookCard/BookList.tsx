@@ -6,7 +6,7 @@ type Book = {
   name: string;
   author: string;
   releasedDate: string;
-  catagories: string[];
+  categories: string[];
   description: string;
   rating: number;
   isAvailable: boolean;

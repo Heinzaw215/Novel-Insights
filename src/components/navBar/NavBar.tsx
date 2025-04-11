@@ -12,7 +12,7 @@ export const NavBar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-amber-800 via-amber-900 to-amber-700 text-white shadow-2xl">
-      <div className="container mx-auto flex justify-between items-center px- md:px-12 py-[2rem]">
+      <div className="container mx-auto flex justify-between items-center px- md:px-12">
         {/* Logo or Brand Name */}
         <Link
           href="/"

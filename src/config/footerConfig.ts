@@ -1,4 +1,3 @@
-// config/footerConfig.ts
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 export const aboutText = `

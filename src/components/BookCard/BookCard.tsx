@@ -7,7 +7,7 @@ type Book = {
   name: string;
   author: string;
   releasedDate: string;
-  catagories: string[];
+  categories: string[];
   description: string;
   rating: number;
   isAvailable: boolean;
@@ -40,7 +40,7 @@ const BookCard = ({ book }: BookCardProps) => {
         <p>{book.releasedDate}</p>
 
         <span className="font-bold">Categories:</span>
-        <p>{book.catagories.join(', ')}</p>
+        <p>{book.categories.join(', ')}</p>
 
         <span className="font-bold">Description:</span>
         <p className="text-sm line-clamp-3">{book.description}</p>
@@ -49,9 +49,9 @@ const BookCard = ({ book }: BookCardProps) => {
         <p>{book.rating} / 5</p>
 
         <span className="font-bold">Available:</span>
-        <p>{book.isAvailable ? 'Yes' : 'No'}</p>
+        <p className={book.isAvailable ? "text-green-600 font-medium" : "text-red-600 font-medium"}>{book.isAvailable ? 'Yes' : 'No'}</p>
       </div>
-      <Link href={`/book/${book.id}`} className="mt-4 w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded transition duration-300 hover:scale-105">
+      <Link href={`/book/${book.id}`} className="w-1/2 flex items-center justify-center mt-4 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded transition duration-300 hover:scale-105">
         View Details
       </Link>
     </div>

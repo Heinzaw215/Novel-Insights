@@ -4,13 +4,17 @@ interface Book {
   bookcover: string;
   author: string;
   releasedDate: number;
-  catagories: Array<string>;
+  categories: Array<string>;
   description: string;
   rating: number;
   isAvailable: boolean;
   // Add any other properties you need for the book
   // such as ISBN, publisher, etc.
 }
+
+// interface categories {
+//   categories:
+// }
 
 export const BookList: Book[] = [
   { // Book 1 (Harry Potter and The Philosopher's Stone)
@@ -19,7 +23,7 @@ export const BookList: Book[] = [
     bookcover: "/harry-potter-philosopher's-stone.jpg",
     author: "J.K. Rowling",
     releasedDate: 1997,
-    catagories: ["Fantasy", "Magic"],
+    categories: ["Fantasy", "Magic"],
     description: "A young boy discovers he is a wizard and attends a magical school.",
     rating: 4.9,
     isAvailable: true,
@@ -30,7 +34,7 @@ export const BookList: Book[] = [
     bookcover: "/the-hobbit.jpg",
     author: "J.R.R. Tolkien",
     releasedDate: 1937,
-    catagories: ["Fantasy", "Adventure"],
+    categories: ["Fantasy", "Adventure"],
     description: "A hobbit embarks on an epic journey to reclaim a lost treasure guarded by a dragon.",
     rating: 4.8,
     isAvailable: true,
@@ -41,7 +45,7 @@ export const BookList: Book[] = [
     bookcover: "/1984.jpg",
     author: "George Orwell",
     releasedDate: 1949,
-    catagories: ["Dystopian", "Political Fiction"],
+    categories: ["Dystopian", "Political Fiction"],
     description: "A chilling depiction of a totalitarian regime and its impact on society.",
     rating: 4.7,
     isAvailable: false,
@@ -52,7 +56,7 @@ export const BookList: Book[] = [
     bookcover: "/to-kill-a-mockingbird.jpg",
     author: "Harper Lee",
     releasedDate: 1960,
-    catagories: ["Classic", "Drama"],
+    categories: ["Classic", "Drama"],
     description: "A story of racial injustice and moral growth in the American South.",
     rating: 4.9,
     isAvailable: true,
@@ -63,7 +67,7 @@ export const BookList: Book[] = [
     bookcover: "/the-great-gatsby.jpg",
     author: "F. Scott Fitzgerald",
     releasedDate: 1925,
-    catagories: ["Classic", "Tragedy"],
+    categories: ["Classic", "Tragedy"],
     description: "A critique of the American Dream set in the Roaring Twenties.",
     rating: 4.5,
     isAvailable: true,
@@ -74,7 +78,7 @@ export const BookList: Book[] = [
     bookcover: "/pride-and-prejudice.jpg",
     author: "Jane Austen",
     releasedDate: 1813,
-    catagories: ["Romance", "Classic"],
+    categories: ["Romance", "Classic"],
     description: "A witty exploration of love, class, and social expectations in 19th-century England.",
     rating: 4.6,
     isAvailable: true,
@@ -85,7 +89,7 @@ export const BookList: Book[] = [
     bookcover: "/the-catcher-in-the-rye.jpg",
     author: "J.D. Salinger",
     releasedDate: 1951,
-    catagories: ["Classic", "Coming-of-Age"],
+    categories: ["Classic", "Coming-of-Age"],
     description: "A teenager's journey through angst and alienation in post-war America.",
     rating: 4.3,
     isAvailable: false,
@@ -96,7 +100,7 @@ export const BookList: Book[] = [
     bookcover: "/the-alchemist.jpg",
     author: "Paulo Coelho",
     releasedDate: 1988,
-    catagories: ["Philosophy", "Adventure"],
+    categories: ["Philosophy", "Adventure"],
     description: "A shepherd's journey to discover his personal legend and fulfill his dreams.",
     rating: 4.8,
     isAvailable: true,
@@ -107,7 +111,7 @@ export const BookList: Book[] = [
     bookcover: "/the-fellowship-of-the-ring.jpg",
     author: "J.R.R. Tolkien",
     releasedDate: 1954,
-    catagories: ["Fantasy", "Adventure"],
+    categories: ["Fantasy", "Adventure"],
     description: "The first part of an epic tale of friendship, courage, and the battle against evil.",
     rating: 4.9,
     isAvailable: true,
@@ -118,7 +122,7 @@ export const BookList: Book[] = [
     bookcover: "/the-da-vinci-code.jpg",
     author: "Dan Brown",
     releasedDate: 2003,
-    catagories: ["Thriller", "Mystery"],
+    categories: ["Thriller", "Mystery"],
     description: "A symbologist unravels a conspiracy hidden in famous works of art.",
     rating: 4.4,
     isAvailable: true,
@@ -129,7 +133,7 @@ export const BookList: Book[] = [
     bookcover: "/the-subtle-art-of-not-giving-a-f_ck.jpg",
     author: "Mark Manson",
     releasedDate: 2016,
-    catagories: ["Self-Help", "Philosophy"],
+    categories: ["Self-Help", "Philosophy"],
     description: "A counterintuitive approach to living a good life, focusing on what truly matters.",
     rating: 4.5,
     isAvailable: true,
@@ -140,7 +144,7 @@ export const BookList: Book[] = [
     bookcover: "/the-secret.jpg",
     author: "Rhonda Byrne",
     releasedDate: 2006,
-    catagories: ["Self-Help", "Motivation"],
+    categories: ["Self-Help", "Motivation"],
     description: "A guide to the law of attraction and how to manifest your desires.",
     rating: 4.6,
     isAvailable: true,
@@ -151,7 +155,7 @@ export const BookList: Book[] = [
     bookcover: "/the-hunger-games.jpg",
     author: "Suzanne Collins",
     releasedDate: 2008,
-    catagories: ["Dystopian", "Adventure"],
+    categories: ["Dystopian", "Adventure"],
     description: "A dystopian novel where children are forced to compete in a deadly televised game.",
     rating: 4.7,
     isAvailable: true,
@@ -162,7 +166,7 @@ export const BookList: Book[] = [
     bookcover: "/a-series-of-unfortunate-events-1-the-bad-beginning.jpg",
     author: "Lemony Snicket", 
     releasedDate: 1999,
-    catagories: ["Adventure", "Mystery"],
+    categories: ["Adventure", "Mystery"],
     description: "A darkly humorous tale of three orphans and their misadventures with a villainous guardian.",
     rating: 4.5,
     isAvailable: true,
@@ -173,7 +177,7 @@ export const BookList: Book[] = [
     bookcover: "/the-secret.jpg",
     author: "Lemony Snicket",
     releasedDate: 2003,
-    catagories: ["Adventure", "Mystery"],
+    categories: ["Adventure", "Mystery"],
     description: "A darkly humorous tale of three orphans and their misadventures with a villainous guardian.",
     rating: 4.4,
     isAvailable: true,
@@ -184,7 +188,7 @@ export const BookList: Book[] = [
     bookcover: "/the-secret.jpg",
     author: "Dan Brown",
     releasedDate: 2003,
-    catagories: ["Thriller", "Mystery"],
+    categories: ["Thriller", "Mystery"],
     description: "A symbologist unravels a conspiracy hidden in famous works of art.",
     rating: 4.4,
     isAvailable: true,
@@ -195,7 +199,7 @@ export const BookList: Book[] = [
     bookcover: "/the-secret.jpg",
     author: "Dan Brown",
     releasedDate: 2003,
-    catagories: ["Thriller", "Mystery"],
+    categories: ["Thriller", "Mystery"],
     description: "A symbologist unravels a conspiracy hidden in famous works of art.",
     rating: 4.4,
     isAvailable: true,

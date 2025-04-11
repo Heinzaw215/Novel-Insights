@@ -32,3 +32,5 @@ const userList: User[] = [
     isAdmin: true,
   },
 ];
+
+export default userList;
