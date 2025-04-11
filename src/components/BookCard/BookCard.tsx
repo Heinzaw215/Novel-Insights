@@ -1,7 +1,7 @@
 // components/BookCard.tsx
 import Image from 'next/image';
 import Link from 'next/link';
-import BookInfoItem from '../BookInfoItem';
+import BookInfoItem from './BookInfoItem';
 
 type Book = {
   id: number;

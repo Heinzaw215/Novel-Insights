@@ -4,7 +4,7 @@ import {
   FooterContact,
   FooterSocial,
   FooterBottom,
-} from '../Footer';
+} from './Footer';
 
 import { aboutText, contactItems, socialLinks } from '@/config/footerConfig';
 

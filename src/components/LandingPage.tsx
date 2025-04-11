@@ -1,7 +1,7 @@
 // components/Main.tsx
 import React from 'react';
 import SectionHeader from './SectionHeader';
-import DefaultCTA from './DefaultCTA';
+import DefaultCTA from './BookCard/DefaultCTA';
 
 type MainProps = {
   renderCTA?: () => React.ReactNode;

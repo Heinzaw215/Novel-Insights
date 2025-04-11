@@ -3,9 +3,8 @@
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { BookList } from '@/database/bookData';
-import BookInfoItem from '@/components/BookInfoItem';
-import BookImage from '@/components/BookImage';
-import BookCard from '@/components/BookCard/BookCard';
+import BookInfoItem from '@/components/BookCard/BookInfoItem';
+import BookImage from '@/components/BookCard/BookImage';
 
 const BookDetailPage = () => {
   const { id } = useParams();
@@ -27,10 +26,12 @@ const BookDetailPage = () => {
     <main className="items-center min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 p-4 sm:p-8">
       <div className="flex flex-col sm:flex-row items-center gap-10 bg-white shadow-2xl rounded-3xl p-6 sm:p-10 max-w-5xl w-full">
         <div className="w-full sm:w-1/2">
-        <BookCard />
           <BookImage src={book.bookCover} alt={book.name} />
         </div>
-
+        <BookList books={booksFromDB.map(book => ({
+        ...book,
+        releasedDate: book.releasedDate.toString()
+      }))} />
         <div className="flex flex-col w-full sm:w-1/2">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-8 text-amber-800 text-center drop-shadow-md leading-tight">
             {book.name}
