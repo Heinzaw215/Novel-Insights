@@ -12,8 +12,8 @@ export const contactItems = [
   },
   {
     icon: FaPhone,
-    label: '+1 (234) 567-890',
-    link: 'tel:+1234567890',
+    label: '+95 9 443-994-066',
+    link: 'tel:+959443994066',
   },
   {
     icon: FaMapMarkerAlt,

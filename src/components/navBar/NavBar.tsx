@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { PrimaryLinks } from "./PrimaryLinks";
-import { MobileMenuToggle } from "./MobileMenuToggle"; // Import the MobileMenuToggle component
+import { MobileMenuToggle } from "./MobileMenuToggle";
 import { MobileMenu } from "./MobileMenu";
 
 export const NavBar = () => {

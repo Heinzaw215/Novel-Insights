@@ -13,7 +13,7 @@ type FooterContactProps = {
 };
 
 const FooterContact = ({title, contactItems }: FooterContactProps) => (
-  <section className="w-full md:w-1/3 xl:w-1/4 px-4">
+  <section className="w-full md:w-1/3 xl:w-1/4 px-4"> 
     <h5 className="text-xl font-serif text-white font-semibold mb-4">{title}</h5>
     <ul className="space-y-4 text-gray-100">
       {contactItems.map(({ icon: Icon, label, link }, index) => (

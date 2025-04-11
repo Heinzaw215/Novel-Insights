@@ -23,7 +23,7 @@ const BookDetailPage = () => {
   }
 
   return (
-    <main className="flex flex-col items-center min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 p-4 sm:p-8">
+    <main className="items-center min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 p-4 sm:p-8">
       <div className="flex flex-col sm:flex-row items-center gap-10 bg-white shadow-2xl rounded-3xl p-6 sm:p-10 max-w-5xl w-full">
         <div className="w-full sm:w-1/2">
           <BookImage src={book.bookcover} alt={book.name} />
@@ -34,20 +34,20 @@ const BookDetailPage = () => {
             {book.name}
           </h1>
 
-          <article className="space-y-5 text-base sm:text-lg leading-relaxed">
-            <BookInfoItem label="Author" value={book.author} />
+          <article className="space-y-5 text-base sm:text-medium leading-relaxed">
+            <BookInfoItem label="Author" value={<span className='whitespace-pre-line'>{book.author}</span>} />
             <BookInfoItem label="Released Date" value={
-              <div className='whitespace-pre-line'>
+              <span  className='whitespace-pre-line'>
                 {book.releasedDate.toString()}
-              </div>
+              </span>
             } />
             <BookInfoItem label="Categories" value={book.categories.join(', ')} />
             <BookInfoItem
               label="Description"
               value={
-                <div className="max-h-60 overflow-y-auto pr-1 whitespace-pre-line">
+                <span className="max-h-60 overflow-y-auto pr-1 whitespace-pre-line">
                   {book.description}
-                </div>
+                </span>
               }
             />
             <BookInfoItem label="Rating" value={`${book.rating} / 5`} />

@@ -13,7 +13,7 @@ const MainBookPage = () => {
   }
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gradient-to-b from-gray-100 to-gray-300">
+    <div className="flex flex-col items-center m-0 min-h-screen bg-gradient-to-b from-gray-100 to-gray-300">
       <h1 className="text-5xl font-extrabold mt-[1rem] mb-6 text-gray-800 text-center">
         Explore Our Book Collection
       </h1>

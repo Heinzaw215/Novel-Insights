@@ -20,7 +20,7 @@ type BookCardProps = {
 
 const BookCard = ({ book }: BookCardProps) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 max-w-sm mx-auto transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-xl">
+    <div className="bg-white shadow-lg rounded-lg p-6 font-serif max-w-sm mx-auto transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-xl">
       <Image
         src={book.bookcover}
         alt={book.name}
@@ -31,7 +31,7 @@ const BookCard = ({ book }: BookCardProps) => {
         placeholder="blur"
         blurDataURL={book.bookcover} // Optional: Low-quality image placeholder
       />
-      <h2 className="text-xl font-bold mb-4 text-gray-800 text-center">{book.name}</h2>
+      <h2 className="text-xl font-serif font-bold mb-4 text-gray-800 text-center">{book.name}</h2>
       <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-gray-600">
         <span className="font-bold">Author:</span>
         <p>{book.author}</p>
@@ -51,9 +51,14 @@ const BookCard = ({ book }: BookCardProps) => {
         <span className="font-bold">Available:</span>
         <p className={book.isAvailable ? "text-green-600 font-medium" : "text-red-600 font-medium"}>{book.isAvailable ? 'Yes' : 'No'}</p>
       </div>
-      <Link href={`/book/${book.id}`} className="w-1/2 flex items-center justify-center mt-4 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded transition duration-300 hover:scale-105">
-        View Details
-      </Link>
+      <div className="flex align-middle">
+        <Link href={`/book/${book.id}`} className="w-1/2  mt-4 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-l transition duration-300 hover:scale-105">
+          View Details
+        </Link>
+        <Link href={`/book/${book.id}`} className="w-1/2 flex items-center justify-center mt-4 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-r transition duration-300 hover:scale-105">
+          Order now
+        </Link>
+      </div>
     </div>
   );
 };

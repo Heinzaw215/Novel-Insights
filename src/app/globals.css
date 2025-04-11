@@ -2,9 +2,7 @@
 @import "tailwindcss";
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @apply font-serif box-border;
 }
 
 @theme {
