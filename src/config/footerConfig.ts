@@ -17,7 +17,7 @@ export const contactItems = [
   },
   {
     icon: FaMapMarkerAlt,
-    label: '123 Book Street, Readville',
+    label: '123 Book Street, Revile',
     link: '',
   },
 ];

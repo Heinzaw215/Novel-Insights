@@ -1,7 +1,7 @@
 interface Book {
   id: number;
   name: string;
-  bookcover: string;
+  bookCover: string;
   author: string;
   releasedDate: number;
   categories: Array<string>;
@@ -20,7 +20,7 @@ export const BookList: Book[] = [
   { // Book 1 (Harry Potter and The Philosopher's Stone)
     id: 1,
     name: "Harry Potter and The Philosopher's Stone",
-    bookcover: "/harry-potter-philosopher's-stone.jpg",
+    bookCover: "/harry-potter-philosopher's-stone.jpg",
     author: "J.K. Rowling",
     releasedDate: 1997,
     categories: ["Fantasy", "Magic"],
@@ -31,7 +31,7 @@ export const BookList: Book[] = [
   { // Book 2 (The Hobbit)
     id: 2,
     name: "The Hobbit",
-    bookcover: "/the-hobbit.jpg",
+    bookCover: "/the-hobbit.jpg",
     author: "J.R.R. Tolkien",
     releasedDate: 1937,
     categories: ["Fantasy", "Adventure"],
@@ -42,7 +42,7 @@ export const BookList: Book[] = [
   { // Book 3 (1984)
     id: 3,
     name: "1984",
-    bookcover: "/1984.jpg",
+    bookCover: "/1984.jpg",
     author: "George Orwell",
     releasedDate: 1949,
     categories: ["Dystopian", "Political Fiction"],
@@ -53,7 +53,7 @@ export const BookList: Book[] = [
   { // Book 4 (To Kill a Mockingbird)
     id: 4,
     name: "To Kill a Mockingbird",
-    bookcover: "/to-kill-a-mockingbird.jpg",
+    bookCover: "/to-kill-a-mockingbird.jpg",
     author: "Harper Lee",
     releasedDate: 1960,
     categories: ["Classic", "Drama"],
@@ -64,7 +64,7 @@ export const BookList: Book[] = [
   { // Book 5 (The Great Gatsby)
     id: 5,
     name: "The Great Gatsby",
-    bookcover: "/the-great-gatsby.jpg",
+    bookCover: "/the-great-gatsby.jpg",
     author: "F. Scott Fitzgerald",
     releasedDate: 1925,
     categories: ["Classic", "Tragedy"],
@@ -75,7 +75,7 @@ export const BookList: Book[] = [
   { // Book 6 (Pride and Prejudice)
     id: 6,
     name: "Pride and Prejudice",
-    bookcover: "/pride-and-prejudice.jpg",
+    bookCover: "/pride-and-prejudice.jpg",
     author: "Jane Austen",
     releasedDate: 1813,
     categories: ["Romance", "Classic"],
@@ -86,7 +86,7 @@ export const BookList: Book[] = [
   { // Book 7 (The Catcher in the Rye)
     id: 7,
     name: "The Catcher in the Rye",
-    bookcover: "/the-catcher-in-the-rye.jpg",
+    bookCover: "/the-catcher-in-the-rye.jpg",
     author: "J.D. Salinger",
     releasedDate: 1951,
     categories: ["Classic", "Coming-of-Age"],
@@ -97,7 +97,7 @@ export const BookList: Book[] = [
   { // Book 8 (The Alchemist)
     id: 8,
     name: "The Alchemist",
-    bookcover: "/the-alchemist.jpg",
+    bookCover: "/the-alchemist.jpg",
     author: "Paulo Coelho",
     releasedDate: 1988,
     categories: ["Philosophy", "Adventure"],
@@ -108,7 +108,7 @@ export const BookList: Book[] = [
   { // Book 9 (The Lord of the Rings: The Fellowship of the Ring)
     id: 9,
     name: "The Lord of the Rings: The Fellowship of the Ring",
-    bookcover: "/the-fellowship-of-the-ring.jpg",
+    bookCover: "/the-fellowship-of-the-ring.jpg",
     author: "J.R.R. Tolkien",
     releasedDate: 1954,
     categories: ["Fantasy", "Adventure"],
@@ -119,7 +119,7 @@ export const BookList: Book[] = [
   { // Book 10 (The Da Vinci Code)
     id: 10,
     name: "The Da Vinci Code",
-    bookcover: "/the-da-vinci-code.jpg",
+    bookCover: "/the-da-vinci-code.jpg",
     author: "Dan Brown",
     releasedDate: 2003,
     categories: ["Thriller", "Mystery"],
@@ -130,7 +130,7 @@ export const BookList: Book[] = [
   { // Book 11 (The Art of not Giving a F*ck)
     id: 11,
     name: "The Art of not Giving a F*ck",
-    bookcover: "/the-subtle-art-of-not-giving-a-f_ck.jpg",
+    bookCover: "/the-subtle-art-of-not-giving-a-f_ck.jpg",
     author: "Mark Manson",
     releasedDate: 2016,
     categories: ["Self-Help", "Philosophy"],
@@ -141,7 +141,7 @@ export const BookList: Book[] = [
   { // Book 12 (The Secret)
     id: 12,
     name: "The Secret",
-    bookcover: "/the-secret.jpg",
+    bookCover: "/the-secret.jpg",
     author: "Rhonda Byrne",
     releasedDate: 2006,
     categories: ["Self-Help", "Motivation"],
@@ -152,7 +152,7 @@ export const BookList: Book[] = [
   { // Book 13 (The Hunger Games)
     id: 13,
     name: "The Hunger Games",
-    bookcover: "/the-hunger-games.jpg",
+    bookCover: "/the-hunger-games.jpg",
     author: "Suzanne Collins",
     releasedDate: 2008,
     categories: ["Dystopian", "Adventure"],
@@ -163,7 +163,7 @@ export const BookList: Book[] = [
   { // Book 14 (The series of unfortunate events - The Bad Beginning)
     id: 14,
     name: "The series of unfortunate events - The Bad Beginning",
-    bookcover: "/a-series-of-unfortunate-events-1-the-bad-beginning.jpg",
+    bookCover: "/a-series-of-unfortunate-events-1-the-bad-beginning.jpg",
     author: "Lemony Snicket", 
     releasedDate: 1999,
     categories: ["Adventure", "Mystery"],
@@ -174,7 +174,7 @@ export const BookList: Book[] = [
   { // Book 15 (The series of unfortunate events - The Reptile Room)
     id: 15,
     name: "The series of unfortunate events - The Reptile Room",
-    bookcover: "/the-secret.jpg",
+    bookCover: "/the-secret.jpg", 
     author: "Lemony Snicket",
     releasedDate: 2003,
     categories: ["Adventure", "Mystery"],
@@ -185,7 +185,7 @@ export const BookList: Book[] = [
   {
     id: 16,
     name: "The Secret",
-    bookcover: "/the-secret.jpg",
+    bookCover: "/the-secret.jpg",
     author: "Dan Brown",
     releasedDate: 2003,
     categories: ["Thriller", "Mystery"],
@@ -196,7 +196,7 @@ export const BookList: Book[] = [
   {
     id: 17,
     name: "The Secret",
-    bookcover: "/the-secret.jpg",
+    bookCover: "/the-secret.jpg",
     author: "Dan Brown",
     releasedDate: 2003,
     categories: ["Thriller", "Mystery"],

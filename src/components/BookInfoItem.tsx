@@ -1,10 +1,15 @@
-// components/BookInfoItem.tsx
 import React from 'react';
 
-const BookInfoItem = ({ label, value }: { label: string; value: React.ReactNode }) => (
-  <p className="text-lg space-x-2 my-4">
-    <span className="font-medium text-gray-800">{label}:</span>
-    <span className="text-gray-700">{value}</span>
+interface BookInfoItemProps {
+  label: string;
+  value: React.ReactNode;
+  className?: string;
+}
+
+const BookInfoItem: React.FC<BookInfoItemProps> = ({ label, value, className='' }) => (
+  <p className={`text-lg space-x-2 my-4 ${className}`}>
+    <span className="font-bold text-gray-800">{label}:</span>
+    <span className="font-light text-gray-700">{value}</span>
   </p>
 );
 

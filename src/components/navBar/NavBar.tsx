@@ -12,18 +12,18 @@ export const NavBar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-amber-800 via-amber-900 to-amber-700 text-white shadow-2xl">
-      <div className="container mx-auto flex justify-between items-center px- md:px-12">
+      <div className="container mx-auto flex justify-between items-center px-2 py-4">
         {/* Logo or Brand Name */}
         <Link
           href="/"
-          className="text-5xl font-extrabold tracking-wide hover:text-amber-300 transition-all duration-300 text-center"
+          className="text-5xl text-left font-bold tracking-wide hover:text-amber-300 transition-all duration-300 "
           title="Go to homepage"
         >
           Novel Insights
         </Link>
 
         {/* Primary Navigation Links */}
-        <ul className="hidden md:flex gap-x-12 text-lg font-serif items-center justify-around">
+        <ul className="hidden md:flex gap-x-12 text-lg font-serif items-center justify-between">
           <PrimaryLinks />
         </ul>
 
