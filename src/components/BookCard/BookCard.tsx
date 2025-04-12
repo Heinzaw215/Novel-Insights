@@ -6,7 +6,7 @@ import BookList from './BookList';
 
 const BookCard = ({ book }: BookCardProps) => {
   return (
-    <article className="bg-white border-black shadow-md rounded-lg p-3 font-serif max-w-sm mx-auto transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-xl">
+    <article className="bg-white border-black shadow-md rounded-lg p-3 max-w-sm mx-auto transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-xl">
       <Image
         src={book.bookCover}
         alt={book.name || "Book Cover"}
@@ -15,7 +15,7 @@ const BookCard = ({ book }: BookCardProps) => {
         className="w-full h-64 object-cover rounded-md mb-4"
         loading="lazy"
       />
-      <h2 className="text-xl font-serif font-bold mb-2 text-gray-800 text-center">{book.name}</h2>
+      <h2 className="text-xl font-bold text-gray-800 text-center">{book.name}</h2>
       <div className="text-gray-600">
         <BookInfoItem label="Author" value={<span className='whitespace-pre-line'>{book.author}</span>} />
 
@@ -35,24 +35,25 @@ const BookCard = ({ book }: BookCardProps) => {
             </span>
           }
         />
-        <BookInfoItem label="Rating" value={`${book.rating} / 5`} />
+        <BookInfoItem label="Rating" value={`${book.rating} / 5 ⭐`} />
 
         <BookInfoItem label="Price" value={`$${book.price}`} />
 
         <BookInfoItem
           label="Available"
           value={
-            <span className={book.isAvailable ? 'text-green-600' : 'text-red-600'}>
+            <span className={book.isAvailable ? 'text-green-600 text-xl' : 'text-red-600'}>
               {book.isAvailable ? 'Yes' : 'No'}
             </span>
           }
         />
       </div>
-      <div className="flex align-middle">
-        <Link href={`/book/${book.id}`} className="w-1/2  mt-4 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-l-full transition duration-300 hover:scale-105 flex items-center justify-center">
+      <div className="flex justify-between">
+        <Link href={`/book/${book.id}`} className="flex items-center justify-center w-1/2 p-2 me-2 bg-amber-700 hover:bg-amber-800 text-white font-bold rounded-l-full transition duration-300 hover:scale-105
+        focus:border-amber-700 focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
           View Details
         </Link>
-        <Link href={`/book/${book.id}`} className="w-1/2  mt-4 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 border border-black rounded-r-full transition duration-300 hover:scale-105 flex items-center justify-center">
+        <Link href={`/book/${book.id}`} className="flex items-center justify-center w-1/2 p-2 ms-2 bg-blue-600 hover:bg-blue-800 text-black  rounded-r-full transition duration-300 hover:scale-105 focus:border-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
           Order now
         </Link>
       </div>
