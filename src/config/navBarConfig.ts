@@ -11,4 +11,5 @@ export const NavBarItems: NavItem[] = [
   { id: 4, label: "Authors", href: "/authors" },
   { id: 5, label: "Genres", href: "/genres" },
   { id: 6, label: "Contact Us", href: "/contact" },
+  { id: 7, label: "Login", href: "/login" },
 ];

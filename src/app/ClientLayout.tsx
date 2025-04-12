@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
-import { ScrollToTopButton } from "@/components/Footer";
+import ScrollToTopButton from "@/components/misc/ScrollToTopButton";
 
 export default function ClientLayout({
   children,
