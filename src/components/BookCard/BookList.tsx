@@ -10,7 +10,7 @@ type Book = {
   description: string;
   rating: number;
   isAvailable: boolean;
-  bookcover: string;
+  bookCover: string;
 };
 
 type BookListProps = {

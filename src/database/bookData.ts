@@ -1,4 +1,4 @@
-interface Book {
+export interface Book {
   id: number;
   name: string;
   bookCover: string;
@@ -7,14 +7,9 @@ interface Book {
   categories: Array<string>;
   description: string;
   rating: number;
+  price:number;
   isAvailable: boolean;
-  // Add any other properties you need for the book
-  // such as ISBN, publisher, etc.
 }
-
-// interface categories {
-//   categories:
-// }
 
 export const BookList: Book[] = [
   { // Book 1 (Harry Potter and The Philosopher's Stone)
@@ -26,6 +21,7 @@ export const BookList: Book[] = [
     categories: ["Fantasy", "Magic"],
     description: "A young boy discovers he is a wizard and attends a magical school.",
     rating: 4.9,
+    price: 10.99,
     isAvailable: true,
   },
   { // Book 2 (The Hobbit)
@@ -37,6 +33,7 @@ export const BookList: Book[] = [
     categories: ["Fantasy", "Adventure"],
     description: "A hobbit embarks on an epic journey to reclaim a lost treasure guarded by a dragon.",
     rating: 4.8,
+    price: 9.99,
     isAvailable: true,
   },
   { // Book 3 (1984)
@@ -48,6 +45,7 @@ export const BookList: Book[] = [
     categories: ["Dystopian", "Political Fiction"],
     description: "A chilling depiction of a totalitarian regime and its impact on society.",
     rating: 4.7,
+    price: 8.99,
     isAvailable: false,
   },
   { // Book 4 (To Kill a Mockingbird)
@@ -59,6 +57,7 @@ export const BookList: Book[] = [
     categories: ["Classic", "Drama"],
     description: "A story of racial injustice and moral growth in the American South.",
     rating: 4.9,
+    price: 7.99,
     isAvailable: true,
   },
   { // Book 5 (The Great Gatsby)
@@ -70,6 +69,7 @@ export const BookList: Book[] = [
     categories: ["Classic", "Tragedy"],
     description: "A critique of the American Dream set in the Roaring Twenties.",
     rating: 4.5,
+    price: 8.49,
     isAvailable: true,
   },
   { // Book 6 (Pride and Prejudice)
@@ -81,6 +81,7 @@ export const BookList: Book[] = [
     categories: ["Romance", "Classic"],
     description: "A witty exploration of love, class, and social expectations in 19th-century England.",
     rating: 4.6,
+    price: 6.99,
     isAvailable: true,
   },
   { // Book 7 (The Catcher in the Rye)
@@ -92,6 +93,7 @@ export const BookList: Book[] = [
     categories: ["Classic", "Coming-of-Age"],
     description: "A teenager's journey through angst and alienation in post-war America.",
     rating: 4.3,
+    price: 7.49,
     isAvailable: false,
   },
   { // Book 8 (The Alchemist)
@@ -103,6 +105,7 @@ export const BookList: Book[] = [
     categories: ["Philosophy", "Adventure"],
     description: "A shepherd's journey to discover his personal legend and fulfill his dreams.",
     rating: 4.8,
+    price: 9.49,
     isAvailable: true,
   },
   { // Book 9 (The Lord of the Rings: The Fellowship of the Ring)
@@ -114,6 +117,7 @@ export const BookList: Book[] = [
     categories: ["Fantasy", "Adventure"],
     description: "The first part of an epic tale of friendship, courage, and the battle against evil.",
     rating: 4.9,
+    price: 12.99,
     isAvailable: true,
   },
   { // Book 10 (The Da Vinci Code)
@@ -125,6 +129,7 @@ export const BookList: Book[] = [
     categories: ["Thriller", "Mystery"],
     description: "A symbologist unravels a conspiracy hidden in famous works of art.",
     rating: 4.4,
+    price: 11.99,
     isAvailable: true,
   },
   { // Book 11 (The Art of not Giving a F*ck)
@@ -136,6 +141,7 @@ export const BookList: Book[] = [
     categories: ["Self-Help", "Philosophy"],
     description: "A counterintuitive approach to living a good life, focusing on what truly matters.",
     rating: 4.5,
+    price: 10.49,
     isAvailable: true,
   },
   { // Book 12 (The Secret)
@@ -147,6 +153,7 @@ export const BookList: Book[] = [
     categories: ["Self-Help", "Motivation"],
     description: "A guide to the law of attraction and how to manifest your desires.",
     rating: 4.6,
+    price: 8.99,
     isAvailable: true,
   },
   { // Book 13 (The Hunger Games)
@@ -158,6 +165,7 @@ export const BookList: Book[] = [
     categories: ["Dystopian", "Adventure"],
     description: "A dystopian novel where children are forced to compete in a deadly televised game.",
     rating: 4.7,
+    price: 10.99,
     isAvailable: true,
   },
   { // Book 14 (The series of unfortunate events - The Bad Beginning)
@@ -169,6 +177,7 @@ export const BookList: Book[] = [
     categories: ["Adventure", "Mystery"],
     description: "A darkly humorous tale of three orphans and their misadventures with a villainous guardian.",
     rating: 4.5,
+    price: 8.49,
     isAvailable: true,
   },
   { // Book 15 (The series of unfortunate events - The Reptile Room)
@@ -180,6 +189,7 @@ export const BookList: Book[] = [
     categories: ["Adventure", "Mystery"],
     description: "A darkly humorous tale of three orphans and their misadventures with a villainous guardian.",
     rating: 4.4,
+    price: 8.49,
     isAvailable: true,
   },
   {
@@ -191,6 +201,7 @@ export const BookList: Book[] = [
     categories: ["Thriller", "Mystery"],
     description: "A symbologist unravels a conspiracy hidden in famous works of art.",
     rating: 4.4,
+    price: 8.49,
     isAvailable: true,
   },
   {
@@ -202,6 +213,7 @@ export const BookList: Book[] = [
     categories: ["Thriller", "Mystery"],
     description: "A symbologist unravels a conspiracy hidden in famous works of art.",
     rating: 4.4,
+    price: 8.49,
     isAvailable: true,
   },
 ];

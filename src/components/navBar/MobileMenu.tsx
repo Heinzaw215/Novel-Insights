@@ -1,37 +1,39 @@
+import React from "react";
+import { NavBarItems } from "@/config/navBarConfig";
 import Link from "next/link";
 
 interface MobileMenuProps {
+  id: string;
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
-  const navBarItems = [
-    { id: 1, name: "Home", href: "/" },
-    { id: 2, name: "Books", href: "/books" },
-    { id: 3, name: "Reviews", href: "/reviews" },
-    { id: 4, name: "About", href: "/about" },
-    { id: 5, name: "Contact", href: "/contact" },
-    { id: 6, name: "Login", href: "/login" },
-  ];
-
+export const MobileMenu: React.FC<MobileMenuProps> = ({ id, isOpen, onClose }) => {
   return (
-    <ul
-      className={`md:hidden bg-amber-800 text-white py-4 px-6 space-y-5 transition-all duration-300 text-xl font-medium ${isOpen ? "block" : "hidden"}`}
-      aria-label="Mobile navigation"
+    <div
+      id={id} // Use the id here
+      className={`md:hidden absolute top-full left-0 w-full bg-amber-800 text-white shadow-lg z-50 origin-top transition-transform duration-300 ease-in-out transform ${
+        isOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+      }`}
+      style={{ transformOrigin: "top" }}
     >
-      {navBarItems.map(({ id, name, href }) => (
-        <li key={id}>
-          <Link
-            href={href}
-            onClick={onClose}
-            className="block hover:text-amber-300 transition duration-300"
-            title={name}
-          >
-            {name}
-          </Link>
-        </li>
-      ))}
-    </ul>
+      <ul className="flex flex-col divide-y divide-amber-700 px-6 py-4">
+        {NavBarItems.map(({ id, label, href }) =>
+          href ? (
+            <li key={id}>
+              <Link href={href} onClick={onClose} className="block py-3 text-lg hover:text-amber-300">
+                {label}
+              </Link>
+            </li>
+          ) : (
+            <li key={id}>
+              <span className="block py-3 text-lg text-gray-500">{label}</span>
+            </li>
+          )
+        )}
+      </ul>
+    </div>
   );
 };
+
+export default MobileMenu;

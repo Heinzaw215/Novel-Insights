@@ -28,10 +28,10 @@ const BookDetailPage = () => {
         <div className="w-full sm:w-1/2">
           <BookImage src={book.bookCover} alt={book.name} />
         </div>
-        <BookList books={booksFromDB.map(book => ({
+        {/* <BookList books={booksFromDB.map(book => ({
         ...book,
         releasedDate: book.releasedDate.toString()
-      }))} />
+      }))} /> */}
         <div className="flex flex-col w-full sm:w-1/2">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-8 text-amber-800 text-center drop-shadow-md leading-tight">
             {book.name}
@@ -40,7 +40,7 @@ const BookDetailPage = () => {
           <article className="space-y-5 text-base sm:text-medium leading-relaxed">
             <BookInfoItem label="Author" value={<span className='whitespace-pre-line'>{book.author}</span>} />
             <BookInfoItem label="Released Date" value={
-              <span  className='whitespace-pre-line'>
+              <span className='whitespace-pre-line'>
                 {book.releasedDate.toString()}
               </span>
             } />
@@ -54,20 +54,20 @@ const BookDetailPage = () => {
               }
             />
             <BookInfoItem label="Rating" value={`${book.rating} / 5`} />
-            <BookInfoItem label="Available" value={book.isAvailable ? '✅ Yes' : '❌ No'}></BookInfoItem >
+            <BookInfoItem label="Available" value={book.isAvailable ? 'Yes' : 'No'} className='{book.isAvailable ? text-green-400 : text-red-400}'></BookInfoItem >
           </article>
 
-          <div className="flex justify-center flex-wrap mt-10 gap-4">
+          <div className="flex justify-center flex-wrap mt-10">
             <button type='button'
               onClick={() => router.back()}
-              className="bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-800 hover:to-amber-900 text-white font-semibold py-4 px-10 rounded-full shadow-lg transform hover:scale-110 transition-transform duration-300"
+              className="py-4 px-10 bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-900 hover:to-amber-800 text-white font-semibold  rounded-l-xl shadow-lg transform hover:scale-110 transition-transform duration-300"
             >
               ← Back to Library
             </button>
-
             <button
               onClick={() => router.push('/books')}
-              className="bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-800 hover:to-amber-900 text-white font-semibold py-4 px-10 rounded-full shadow-lg transform hover:scale-110 transition-transform duration-300"
+              className="py-4 px-10 text-white font-semibold shadow-lg 
+              rounded-r-xl bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-800 hover:to-amber-900 hover:scale-110 transform transition-transform duration-300"
             >
               Discover more books →
             </button>

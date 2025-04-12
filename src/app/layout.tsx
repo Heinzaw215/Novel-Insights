@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+// ❌ Do NOT put "use client" here!
 import "./globals.css";
-import { ScrollToTopButton } from "@/components/Footer";
+import type { Metadata } from "next";
+import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
   title: "Novel Insights - Books reviews website",
@@ -9,14 +10,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body>
-        {children}
-        <ScrollToTopButton />
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

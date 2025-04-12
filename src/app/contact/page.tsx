@@ -1,10 +1,11 @@
-import { FooterNewsletter } from '@/components/Footer'
-import { newsletterConfig } from '@/config/footerConfig'
+import { FooterAbout, FooterNewsletter } from '@/components/Footer'
+import { aboutText, newsletterConfig } from '@/config/footerConfig'
 import React from 'react'
 
 const ContactPage = () => {
   return (
     <div>ContactPage
+      <FooterAbout title="About Us" content={aboutText} />
       <FooterNewsletter
         heading={newsletterConfig.heading}
         description={newsletterConfig.description}

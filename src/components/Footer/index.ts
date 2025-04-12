@@ -1,5 +1,4 @@
 // components/index.ts
-
 export { default as FooterAbout } from './FooterAbout';
 export { default as FooterContact } from './FooterContact';
 export { default as FooterSocial } from './FooterSocial';
