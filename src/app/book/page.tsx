@@ -38,7 +38,7 @@ const MainBookPage = () => {
       <div className="relative z-10 text-center p-4 w-full mx-auto">
         <SectionHeader 
           title='Explore Our Book Collection'
-          titleStyle='text-5xl font-semibold md:font-bold lg:font-extrabold text-yellow-400'
+          titleStyle='text-6xl font-semibold md:font-bold lg:font-extrabold text-yellow-400'
           subtitle='Discover your next favorite book from our curated collection.
           Browse through genres, authors, and more.'
           subtitleStyle='text-xl text-yellow-200 font-medium md:font-bold lg:font-extrabold mt-4 mb-8 max-w-2xl mx-auto'

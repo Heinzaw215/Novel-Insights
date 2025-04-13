@@ -11,3 +11,7 @@ export interface Review {
 export interface GenreTagProps {
   genre: string;
 };
+
+export interface GenreIcons {
+  [key: string]: string;
+}

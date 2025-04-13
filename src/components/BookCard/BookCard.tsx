@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import BookInfoItem from './BookInfoItem';
-import BookList from './BookList';
+// import BookList from './BookList';
 
 const BookCard = ({ book }: BookCardProps) => {
   return (
@@ -53,7 +53,7 @@ const BookCard = ({ book }: BookCardProps) => {
         focus:border-amber-700 focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
           View Details
         </Link>
-        <Link href={`/book/${book.id}`} className="flex items-center justify-center w-1/2 p-2 ms-2 bg-blue-600 hover:bg-blue-800 text-black  rounded-r-full transition duration-300 hover:scale-105 focus:border-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+        <Link href={`/book/${book.id}/order`} className="flex items-center justify-center w-1/2 p-2 ms-2 bg-blue-600 hover:bg-blue-800 text-white  rounded-r-full transition duration-300 hover:scale-105 focus:border-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
           Order now
         </Link>
       </div>

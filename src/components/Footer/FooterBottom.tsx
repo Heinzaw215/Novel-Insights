@@ -9,7 +9,7 @@ const FooterBottom = () => (
     <div>
       Designed and Developed by{' '}
       <span className="font-medium hover:text-orange-600 transition-colors duration-300">
-        Your Name
+        HeinzZaw
       </span>
     </div>
   </div>

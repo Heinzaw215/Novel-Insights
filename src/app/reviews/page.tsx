@@ -32,8 +32,8 @@ const ReviewsPage = () => {
       </div>
 
       {/* All reviews */}
-      <ReviewList />  {/* ← Show all the sample reviews here */}
-
+      <ReviewList />
+      
       {/* Review submission form */}
       <div className="mt-12 w-full max-w-2xl">
         <ReviewForm />

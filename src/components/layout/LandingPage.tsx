@@ -1,8 +1,8 @@
 // components/Main.tsx
 import React from 'react';
-import SectionHeader from './SectionHeader';
-import DefaultCTA from './BookCard/DefaultCTA';
-import GradientOverlay from './misc/GradientOverlay';
+import SectionHeader from '../SectionHeader';
+import DefaultCTA from '../BookCard/DefaultCTA';
+import GradientOverlay from '../misc/GradientOverlay';
 
 type MainProps = {
   renderCTA?: () => React.ReactNode;

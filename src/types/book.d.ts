@@ -3,7 +3,7 @@ export interface Book {
   name: string;
   bookCover: string;
   author: string;
-  releasedDate: number;
+  releasedDate: number | Date;
   categories: Array<string>;
   description: string;
   rating: number;
