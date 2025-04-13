@@ -4,7 +4,7 @@ import React, { useMemo } from 'react';
 import useLoading from '@/hooks/isLoading';
 import LoadingSpinner from './loading';
 import BookList from '@/components/BookCard/BookList';
-import { BookList as booksFromDB } from '@/database/bookData';
+import { BookList as booksFromDB } from '@/data/bookData';
 import GradientOverlay from '@/components/misc/GradientOverlay';
 import SectionHeader from '@/components/SectionHeader';
 

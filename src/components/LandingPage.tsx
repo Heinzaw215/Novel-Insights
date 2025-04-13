@@ -23,9 +23,9 @@ const LandingPage: React.FC<MainProps> = ({ renderCTA }) => {
         <div className="text-overlay relative p-2">
           <SectionHeader
             title="Discover Your Next Favorite Book"
-            titleStyle="font-semibold md:font-bold lg:font-extrabold text-yellow-400"
+            titleStyle="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-yellow-400"
             subtitle="Dive into insightful reviews, uncover hidden gems, and explore the world of literature like never before."
-            subtitleStyle="text-yellow-200 font-medium md:font-bold lg:font-extrabold max-w-2xl mx-auto"
+            subtitleStyle="text-yellow-200 text-base sm:text-lg lg:text-xl font-medium"
           />
 
           {renderCTA ? renderCTA() : <DefaultCTA />}

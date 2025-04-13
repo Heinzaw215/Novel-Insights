@@ -1,15 +1,4 @@
-export interface Book {
-  id: number;
-  name: string;
-  bookCover: string;
-  author: string;
-  releasedDate: number;
-  categories: Array<string>;
-  description: string;
-  rating: number;
-  price:number;
-  isAvailable: boolean;
-}
+import { Book } from "../types/book";
 
 export const BookList: Book[] = [
   { // Book 1 (Harry Potter and The Philosopher's Stone)

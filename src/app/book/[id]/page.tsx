@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { BookList } from '@/database/bookData';
+import { BookList } from '@/data/bookData';
 import BookInfoItem from '@/components/BookCard/BookInfoItem';
 import BookImage from '@/components/BookCard/BookImage';
 
