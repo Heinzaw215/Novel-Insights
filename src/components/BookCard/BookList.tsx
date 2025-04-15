@@ -17,10 +17,11 @@ type BookListProps = {
   books: Book[];
 };
 
-const BookList = ({ books }: BookListProps) => {
+const BookList = ({ books, limit}: BookListProps) => {
+  const bookToShow = limit ? books.slice(0, limit) : books;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-      {books.map((book) => (
+      {bookToShow.map((book) => (
         <BookCard key={book.id} book={book} />
       ))}
     </div>

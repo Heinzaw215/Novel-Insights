@@ -1,4 +1,3 @@
-// ❌ Do NOT put "use client" here!
 import "./globals.css";
 import type { Metadata } from "next";
 import ClientLayout from "./ClientLayout";

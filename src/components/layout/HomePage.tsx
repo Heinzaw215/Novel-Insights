@@ -1,12 +1,13 @@
 import React from 'react'
 import NavBar from './NavBar'
 import Footer from './Footer'
+import { ReviewList } from '../ReviewsCard'
 
 const HomePage = () => {
   return (
     <>
       <NavBar />
-      <div className="bg-amber-600 min-h-screen">
+      <div className="bg-amber-600 min-h-screen p-8">
         <header className='flex flex-col items-center p-4'>
           <h1 className='text-4xl font-extrabold text-white'>Home Page</h1>
           <p className='text-xl font-medium text-white mt-2'>Welcome to my Website.</p>
@@ -21,6 +22,10 @@ const HomePage = () => {
               <p className="text-xl font-semibold">Item {index + 1}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mx-6">
+          <ReviewList initialLimit={6}  loadMoreCount={30}/> {/*limit='6'*/}
         </div>
       </div>
       <Footer />

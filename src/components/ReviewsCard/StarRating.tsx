@@ -20,8 +20,8 @@ const StarRating = ({ rating }: StarRatingProps) => {
   }
 
   return (
-    <div className="flex gap-1" aria-label={`Rating: ${rating} out of 5 stars`}>
-      {stars}
+    <div className="flex gap-1 text-center" aria-label={`Rating: ${rating} out of 5 stars`}>
+       {stars} {rating}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import BackButton from '@/components/misc/BackButton';
 import Link from 'next/link';
 // import { useRouter } from 'next/navigation'
 import React from 'react'
@@ -7,6 +8,7 @@ import React from 'react'
 const LoginPage = () => {
   return (
     <div>
+      <BackButton />
       <Link href="/" className="text-blue-500 hover:underline">
         <h1>Back to Home</h1>
       </Link>

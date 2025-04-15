@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import BookInfoItem from './BookInfoItem';
+import { GenreTag } from '../ReviewsCard';
 // import BookList from './BookList';
 
 const BookCard = ({ book }: BookCardProps) => {
@@ -24,7 +25,11 @@ const BookCard = ({ book }: BookCardProps) => {
             {book.releasedDate.toString()}
           </span>
         } />
-        
+
+        {/* <div className="flex flex-wrap gap-2">
+          {genres.map((genre, idx) => <GenreTag key={idx} label={genre} />)}
+        </div> */}
+
         <BookInfoItem label="Categories" value={book.categories.join(', ')} />
 
         <BookInfoItem
@@ -49,11 +54,11 @@ const BookCard = ({ book }: BookCardProps) => {
         />
       </div>
       <div className="flex justify-between">
-        <Link href={`/book/${book.id}`} className="flex items-center justify-center w-1/2 p-2 me-2 bg-amber-700 hover:bg-amber-800 text-white font-bold rounded-l-full transition duration-300 hover:scale-105
+        <Link href={`/books/${book.id}`} className="flex items-center justify-center w-1/2 p-2 me-2 bg-amber-700 hover:bg-amber-800 text-white font-bold rounded-l-full transition duration-300 hover:scale-105
         focus:border-amber-700 focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
           View Details
         </Link>
-        <Link href={`/book/${book.id}/order`} className="flex items-center justify-center w-1/2 p-2 ms-2 bg-blue-600 hover:bg-blue-800 text-white  rounded-r-full transition duration-300 hover:scale-105 focus:border-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+        <Link href={`/books/${book.id}/order`} className="flex items-center justify-center w-1/2 p-2 ms-2 bg-blue-600 hover:bg-blue-800 text-white  rounded-r-full transition duration-300 hover:scale-105 focus:border-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
           Order now
         </Link>
       </div>

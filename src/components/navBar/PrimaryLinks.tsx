@@ -10,7 +10,7 @@ export const PrimaryLinks = () => {
   return (
     <>
       {NavBarItems.map(({ id, label, href }) => {
-        const isActive = pathname === href;
+        const isActive = pathname === href || (pathname === '/' && href === '/');
 
         return (
           <li key={id}>
@@ -22,6 +22,7 @@ export const PrimaryLinks = () => {
                   : "hover:text-amber-300 border-transparent"
               }`}
               title={label}
+              aria-current={isActive ? "page" : undefined}
             >
               {label}
             </Link>

@@ -7,6 +7,7 @@ import BookList from '@/components/BookCard/BookList';
 import { BookList as booksFromDB } from '@/data/bookData';
 import GradientOverlay from '@/components/misc/GradientOverlay';
 import SectionHeader from '@/components/SectionHeader';
+// import { GenreTag } from '@/components/ReviewsCard';
 
 const MainBookPage = () => {
   const isLoading = useLoading(1000);
@@ -36,7 +37,7 @@ const MainBookPage = () => {
       />
 
       <div className="relative z-10 text-center p-4 w-full mx-auto">
-        <SectionHeader 
+        <SectionHeader
           title='Explore Our Book Collection'
           titleStyle='text-6xl font-semibold md:font-bold lg:font-extrabold text-yellow-400'
           subtitle='Discover your next favorite book from our curated collection.
@@ -44,7 +45,7 @@ const MainBookPage = () => {
           subtitleStyle='text-xl text-yellow-200 font-medium md:font-bold lg:font-extrabold mt-4 mb-8 max-w-2xl mx-auto'
         />
 
-        <BookList books={books} />
+        <BookList books={books}/>
       </div>
     </section>
   );

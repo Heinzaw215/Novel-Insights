@@ -1,12 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import LandingPage from "@/components/layout/LandingPage";
+import { LandingPage, HomePage } from "@/components/layout";
 import LoadingSpinner from "@/components/misc/LoadingSpinner";
-import HomePage from "@/components/layout/HomePage";
 
 export default function Home() {
-  const [isNewUser, setIsNewUser] = useState(null); // null means "undecided"
+  const [isNewUser, setIsNewUser] = useState(null);
 
   useEffect(() => {
     const hasVisited = localStorage.getItem("hasVisited");
@@ -25,4 +24,4 @@ export default function Home() {
   }
 
   return <div>{isNewUser ? <LandingPage /> : <HomePage />}</div>;
-}
+};
