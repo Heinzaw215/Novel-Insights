@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { BookList } from '@/data/bookData';
 import BookInfoItem from '@/components/BookCard/BookInfoItem';
@@ -10,7 +10,7 @@ const BookDetailPage = () => {
   const { id } = useParams();
   const router = useRouter();
 
-  const book = BookList.find((book) => book.id === Number(id));
+  const book = useMemo(() => BookList.find((book) => book.id === Number(id)), [id]);
 
   if (!book) {
     return (
@@ -51,7 +51,12 @@ const BookDetailPage = () => {
             />
             <BookInfoItem label="Rating" value={`${book.rating} / 5`} />
 
-            <BookInfoItem label="Available" value={book.isAvailable ? 'Yes' : 'No'} className='{book.isAvailable ? text-green-400 : text-red-400}'></BookInfoItem >
+            <BookInfoItem
+              label="Available"
+              value={book.isAvailable ? 'Yes' : 'No'}
+              className={book.isAvailable ? 'text-green-500' : 'text-red-500'}
+            />
+
 
           </article>
 

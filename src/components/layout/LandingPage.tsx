@@ -3,6 +3,16 @@ import React from 'react';
 import SectionHeader from '../SectionHeader';
 import DefaultCTA from '../BookCard/DefaultCTA';
 import GradientOverlay from '../misc/GradientOverlay';
+import { landingConfig } from "@/config/landingPageConfig";
+// import BookList from "@/data/bookData";
+
+
+// export async function getStaticProps() {
+//   return {
+//     props: { books: BookList }
+//   }
+// }
+const { title, subtitle } = landingConfig.default;
 
 type MainProps = {
   renderCTA?: () => React.ReactNode;
@@ -22,9 +32,9 @@ const LandingPage: React.FC<MainProps> = ({ renderCTA }) => {
 
         <div className="text-overlay relative p-2">
           <SectionHeader
-            title="Discover Your Next Favorite Book"
+            title={title}
             titleStyle="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-yellow-400"
-            subtitle="Dive into insightful reviews, uncover hidden gems, and explore the world of literature like never before."
+            subtitle={subtitle}
             subtitleStyle="text-yellow-200 text-base sm:text-lg lg:text-xl font-medium"
           />
 

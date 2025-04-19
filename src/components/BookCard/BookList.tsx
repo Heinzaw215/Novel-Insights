@@ -1,23 +1,13 @@
 // components/BookList.tsx
+import { Book } from '@/types/book';
 import BookCard from './BookCard';
-
-type Book = {
-  id: number;
-  name: string;
-  author: string;
-  releasedDate: string;
-  categories: string[];
-  description: string;
-  rating: number;
-  isAvailable: boolean;
-  bookCover: string;
-};
 
 type BookListProps = {
   books: Book[];
+  limit?: number;
 };
 
-const BookList = ({ books, limit}: BookListProps) => {
+const BookList = ({ books, limit }: BookListProps) => {
   const bookToShow = limit ? books.slice(0, limit) : books;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
