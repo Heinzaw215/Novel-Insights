@@ -5,13 +5,13 @@ import { LandingPage, HomePage } from "@/components/layout";
 import LoadingSpinner from "@/components/misc/LoadingSpinner";
 
 export default function Home() {
-  const [isNewUser, setIsNewUser] = useState(null);
+  const [isNewUser, setIsNewUser] = useState<boolean | null>(null);
 
   useEffect(() => {
     const hasVisited = localStorage.getItem("hasVisited");
 
     if (hasVisited) {
-      setIsNewUser(false);
+      setIsNewUser(true); // #TODO: Change later to false
     } else {
       localStorage.setItem("hasVisited", "true");
       setIsNewUser(true);

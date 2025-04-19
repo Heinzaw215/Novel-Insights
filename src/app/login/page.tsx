@@ -11,6 +11,15 @@ import SubmitButton from '@/components/Login/SubmitButton';
 
 // Schema
 const loginSchema = z.object({
+  username: z.string()
+    .min(5, "UserName must be higher than 5 characters")
+    .max(20, "UserName must be lower than 20 characters"),
+  age: z.coerce.number({
+    required_error: "Age is required",
+    invalid_type_error: "Age must be a number",
+  })
+    .min(1, "Age must be at least 1")
+    .max(120, "Age must be realistic"),
   email: z.string().email("Enter a valid email"),
   password: z.string().min(6, "Password must be at least 6 characters"),
   remember: z.boolean().optional(),
@@ -76,7 +85,7 @@ export default function LoginForm() {
       });
 
       console.log('Login success:', result);
-    } catch (error: any) {
+    } catch (error) {
       toast.error('Invalid credentials', {
         style: {
           background: '#fee2e2',
@@ -105,8 +114,31 @@ export default function LoginForm() {
         </button>
       </div>
 
-      {/* Email */}
+      <div className='grid grid-cols-1'>
+        <label htmlFor="username" className='mb-1 font-medium'>Username:</label>
+        <input
+          id='username'
+          type="text"
+          {...register("username")}
+          className="inline w-full border border-gray-300 px-3 py-2 rounded mt-1" required aria-required
+        />
+        {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username.message}</p>}
+      </div>
+
       <div>
+        {/* Age */}
+        <label htmlFor="age" className='block mb-1 font-medium'>Age:</label>
+        <input
+          id='age'
+          type="text"
+          {...register("age")}
+          className="w-full border border-gray-300 px-3 py-2 rounded mt-1"
+        />
+        {errors.age && <p className="text-red-500 text-sm mt-1">{errors.age.message}</p>}
+      </div>
+
+      <div>
+        {/* Email */}
         <label htmlFor="email" className="block mb-1 font-medium">Email</label>
         <input
           id="email"
@@ -128,12 +160,11 @@ export default function LoginForm() {
           value={passwordInput}
           onChange={(e) => setPasswordInput(e.target.value)}
           className="w-full border border-gray-300 px-3 py-2 rounded pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="••••••••"
         />
         <button
           type="button"
           onClick={togglePasswordVisibility}
-          className="absolute inset-y-0 top-6 -right-2 flex items-center text-gray-500 hover:text-blue-600"
+          className="absolute inset-y-0 right-3 flex items-center bg-transparent px-2 text-gray-500 hover:text-blue-600"
           aria-label={showPassword ? 'Hide password' : 'Show password'}
         >
           {showPassword ? <FaEyeSlash /> : <FaEye />}
@@ -141,15 +172,15 @@ export default function LoginForm() {
         {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
 
         {/* Strength Meter */}
-        {passwordInput && (
+        {passwordInput && strength && (
           <div className="mt-2">
             <div className="h-2 w-full rounded bg-gray-200">
               <div
-                className={`h-2 rounded ${strength.color}`}
+                className={`h-2 rounded ${strength.color} transition-all duration-300`}
                 style={{ width: `${strength.value}%` }}
               />
             </div>
-            <p className={`text-sm mt-1 ${strength.color.replace('bg-', 'text-')}`}>
+            <p className={`text-sm mt-1 ${strength.color.replace('bg-', 'text-')}`} aria-live="polite">
               Strength: {strength.label}
             </p>
           </div>

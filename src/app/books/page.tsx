@@ -1,45 +1,45 @@
 "use client";
 
-import React, { useMemo, useState } from 'react';
+import React from 'react';
 import useLoading from '@/hooks/isLoading';
 import LoadingSpinner from './loading';
-import BookList from '@/components/BookCard/BookList';
-import { BookList as booksFromDB } from '@/data/bookData';
+// import BookList from '@/components/BookCard/BookList';
+// import { BookList as booksFromDB } from '@/data/bookData';
 import GradientOverlay from '@/components/misc/GradientOverlay';
 import SectionHeader from '@/components/SectionHeader';
-import BookFilter from '@/components/BookCard/BookFilter';
+// import BookFilter from '@/components/BookCard/BookFilter';
 
 const MainBookPage = () => {
   const isLoading = useLoading(1000);
 
   // Ensure that booksFromDB is valid before calling map
-  const books = useMemo(() => {
-    if (booksFromDB && Array.isArray(booksFromDB)) {
-      return booksFromDB.map(book => ({
-        ...book,
-        releasedDate: book.releasedDate.toString()
-      }));
-    }
-    return []; // Return an empty array if booksFromDB is not valid
-  }, []);
+  // const books = useMemo(() => {
+  //   if (booksFromDB && Array.isArray(booksFromDB)) {
+  //     return booksFromDB.map(book => ({
+  //       ...book,
+  //       releasedDate: book.releasedDate.toString()
+  //     }));
+  //   }
+  //   return []; // Return an empty array if booksFromDB is not valid
+  // }, []);
 
-  const [filteredBooks, setFilteredBooks] = useState(books);
+  // const [filteredBooks, setFilteredBooks] = useState(books);
 
-  const handleFilter = (criteria: { genre?: string; available?: boolean }) => {
-    let filtered = books;
+  // const handleFilter = (criteria: { genre?: string; available?: boolean }) => {
+  //   let filtered = books;
 
-    if (criteria.genre) {
-      filtered = filtered.filter(book =>
-        book.categories.includes(criteria.genre)
-      );
-    }
+  //   if (criteria.genre) {
+  //     filtered = filtered.filter(book =>
+  //       book.categories.includes(criteria.genre)
+  //     );
+  //   }
 
-    if (criteria.available !== undefined) {
-      filtered = filtered.filter(book => book.isAvailable === criteria.available);
-    }
+  //   if (criteria.available !== undefined) {
+  //     filtered = filtered.filter(book => book.isAvailable === criteria.available);
+  //   }
 
-    setFilteredBooks(filtered);
-  };
+  //   setFilteredBooks(filtered);
+  // };
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -65,13 +65,13 @@ const MainBookPage = () => {
           Browse through genres, authors, and more.'
           subtitleStyle='text-xl text-yellow-200 font-medium md:font-bold lg:font-extrabold mt-4 mb-8 max-w-2xl mx-auto'
         />
-        <BookFilter
+        {/* <BookFilter
           onFilter={handleFilter}
           categories={allCategories}
-        />
-        <BookList books={filteredBooks} />
+        /> */}
+        {/* <BookList books={books}/> */}
       </div>
-    </section>
+    </section >
   );
 };
 

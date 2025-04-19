@@ -5,6 +5,9 @@ import Link from "next/link";
 import { PrimaryLinks } from "../NavBar/PrimaryLinks";
 import MobileMenuToggle from "../NavBar/MobileMenuToggle";
 import { MobileMenu } from "../NavBar/MobileMenu";
+import { motion } from "framer-motion";
+import { NavBarConfig } from '@/config/navBarConfig';
+
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,7 +16,7 @@ const NavBar = () => {
   const closeMobile = () => setMobileOpen(false);
 
   return (
-    <header
+    <motion.header
       className="relative bg-amber-500 text-black shadow-2xl dark:text-black dark:bg-amber-400 dark:shadow-none"
       aria-label="Main Navigation"
     >
@@ -24,7 +27,7 @@ const NavBar = () => {
           className="text-4xl uppercase font-bold hover:text-orange-500 transition-all duration-300"
           title="Go to homepage"
         >
-          Novel Insights
+          {NavBarConfig.pageName}
         </Link>
 
         {/* Primary Navigation Links */}
@@ -49,7 +52,7 @@ const NavBar = () => {
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       />
-    </header>
+    </motion.header>
   );
 };
 

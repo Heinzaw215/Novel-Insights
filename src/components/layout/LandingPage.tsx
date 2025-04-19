@@ -4,21 +4,19 @@ import SectionHeader from '../SectionHeader';
 import DefaultCTA from '../BookCard/DefaultCTA';
 import GradientOverlay from '../misc/GradientOverlay';
 import { landingConfig } from "@/config/landingPageConfig";
+import { motion } from 'framer-motion';
 // import BookList from "@/data/bookData";
 
 
 // export async function getStaticProps() {
 //   return {
-//     props: { books: BookList }
+//     props: { books: BookList } 
 //   }
 // }
+
 const { title, subtitle } = landingConfig.default;
 
-type MainProps = {
-  renderCTA?: () => React.ReactNode;
-};
-
-const LandingPage: React.FC<MainProps> = ({ renderCTA }) => {
+const LandingPage = () => {
   return (
     <main className="bg-gray-100 dark:bg-gray-800 shadow-md">
       <div className="image-wrapper relative">
@@ -30,7 +28,12 @@ const LandingPage: React.FC<MainProps> = ({ renderCTA }) => {
           to="to-amber-900/80"
         />
 
-        <div className="text-overlay relative p-2">
+        <motion.div
+          className="text-overlay relative p-2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <SectionHeader
             title={title}
             titleStyle="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-yellow-400"
@@ -38,10 +41,10 @@ const LandingPage: React.FC<MainProps> = ({ renderCTA }) => {
             subtitleStyle="text-yellow-200 text-base sm:text-lg lg:text-xl font-medium"
           />
 
-          {renderCTA ? renderCTA() : <DefaultCTA />}
-        </div>
+          <DefaultCTA />
+        </motion.div>
       </div>
-    </main>
+    </main >
   );
 };
 

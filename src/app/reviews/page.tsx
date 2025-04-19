@@ -22,14 +22,13 @@ const ReviewsPage = () => {
       /> */}
 
       <div className="relative z-10 text-center p-6">
-        {/* Optional header here */}
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-        {/* {filteredReviews.map((review, index) => (
+      {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        {filteredReviews.map((review, index) => (
           <ReviewCard key={index} {...review} />
-        ))} */}
-      </div>
+        ))}
+      </div> */}
 
       {/* All reviews */}
       <ReviewList />
