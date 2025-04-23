@@ -1,66 +1,60 @@
 // components/BookCard.tsx
 import Image from 'next/image';
 import Link from 'next/link';
-import BookInfoItem from './BookInfoItem';
-// import { GenreTag } from '../ReviewsCard';
+import { motion } from "framer-motion"
 import { Book } from '@/types/book';
+// import { GenreTag } from '../ReviewsCard';
 
-const BookCard = ({ id, bookCover, name, author, releasedDate, categories, description, rating, price, isAvailable }: Book) => {
+const MotionLink = motion.create(Link);
+
+const BookCard = ({ book }) => {
   return (
-    <article className="bg-white border-black shadow-md rounded-lg p-3 max-w-sm mx-auto transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-xl">
+    <article className="bg-white border-black shadow-md rounded-[20px] p-3 max-w-md mx-auto transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-xl">
       <Image
-        src={bookCover}
-        alt={name || "Book Cover"}
+        src={book.bookCover}
+        alt={book.name || "Book Cover"}
         width={200}
         height={600}
-        className="w-full h-64 object-cover rounded-md mb-4"
+        className="w-full h-64 object-cover rounded-[20px] mb-2"
         loading="lazy"
       />
-      <h2 className="text-xl font-bold text-gray-800 text-center">{name}</h2>
-      <div className="text-gray-600">
-        <BookInfoItem label="Author" value={<span className='whitespace-pre-line'>{author}</span>} />
-
-        <BookInfoItem label="Released Date" value={
-          <span className='whitespace-pre-line'>
-            {releasedDate.toString()}
-          </span>
-        } />
-
-        {/* <div className="flex flex-wrap gap-2">
-          {genres.map((genre, idx) => <GenreTag key={idx} label={genre} />)}
-        </div> */}
-
-        <BookInfoItem label="Categories" value={categories.join(', ')} />
-
-        <BookInfoItem
-          label="Description"
-          value={
-            <span className="line-clamp-3 whitespace-pre-line">
-              {description}
-            </span>
-          }
-        />
-        <BookInfoItem label="Rating" value={`${rating} / 5 ⭐`} />
-
-        <BookInfoItem label="Price" value={`$${price}`} />
-
-        <BookInfoItem
-          label="Available"
-          value={
-            <span className={isAvailable ? 'text-green-600 text-xl' : 'text-red-600'}>
-              {isAvailable ? 'Yes' : 'No'}
-            </span>
-          }
-        />
+      <div className='flex items-center p-2 bg-neutral-300 rounded-t-[20px]'>
+        <h2 className={`font-extrabold italic text-gray-800 w-3/4 text-left text-clip ${book.name.length > 20 ? "text-[1.25rem]" : "text-[2rem]"}`
+        }>
+          
+          {book.name}
+        </h2>
+        <div className='w-1/4 font-mono text-center'>
+          <p className='text-[1.75rem] font-medium'>${book.price}</p>
+          <p className='text-[1.25rem] font-medium text-yellow-800'>⭐{book.rating}/5</p>
+        </div>
       </div>
-      <div className="flex justify-between">
-        <Link href={`/books/${id}`} className="flex items-center justify-center w-1/2 p-2 me-2 bg-amber-700 hover:bg-amber-800 text-white font-bold rounded-l-full transition duration-300 hover:scale-105
-        focus:border-amber-700 focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+      <div className='bg-neutral-400 py-3 text-lg text-white font-semibold tracking-wider rounded-b-[20px]'>
+        <p>{book.genres.join(", ")}</p>
+      </div>
+
+      <div className="grid grid-rows-1 grid-cols-2 mt-1 mb-3 gap-4">
+        <div className='border bg-neutral-700 text-white rounded-xl p-1'>
+          <p className='font-bold'>Author</p>
+          <p>{book.author}</p>
+        </div>
+        <div className='border bg-neutral-700 text-white rounded-xl p-1'>
+          <h2 className='font-semibold'>Released Date</h2>
+          <p>{book.releasedDate}</p>
+        </div>
+      </div>
+
+      <div className='my-3 text-xl'>
+        <p>{book.description}</p>
+      </div>
+
+      <div className="grid">
+        <MotionLink href={`/books/${book.id}`} className="p-2 bg-amber-700 hover:bg-amber-800 text-white font-bold rounded-[12px] transition duration-300 
+        focus:border-amber-700 focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50"
+          whileHover={{ backgroundColor: "#333" }}
+          whileFocus={{ border: "2px solid #333" }}>
           View Details
-        </Link>
-        <Link href={`/books/${id}/order`} className="flex items-center justify-center w-1/2 p-2 ms-2 bg-blue-600 hover:bg-blue-800 text-white  rounded-r-full transition duration-300 hover:scale-105 focus:border-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-          Order now
-        </Link>
+        </MotionLink>
       </div>
     </article>
   );

@@ -18,8 +18,6 @@ const MobileMenuToggle: React.FC<MobileMenuToggleProps> = React.memo(
         onClick={onClick}
         aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
         title={isOpen ? "Close menu" : "Open menu"}
-        aria-expanded={isOpen} // Pass boolean
-        aria-controls="mobile-menu" // Link the button to the mobile menu
         {...props}
       >
         <span

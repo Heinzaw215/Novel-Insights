@@ -39,7 +39,7 @@ const NavBar = () => {
         <MobileMenuToggle
           isOpen={mobileOpen}
           onClick={toggleMobile}
-          aria-expanded={mobileOpen ? "true" : "false"} // Accessibility improvement
+          aria-expanded={mobileOpen ? "true" : "false"}
         />
       </div>
 

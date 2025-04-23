@@ -17,7 +17,7 @@ const HomePage = () => {
           {Array.from({ length: 9 }).map((_, index) => (
             <div
               key={index}
-              className="bg-white p-6 text-xl rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition duration-300"
+              className="bg-white p-6 text-xl rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
             >
               <p className="text-xl font-semibold">Item {index + 1}</p>
             </div>

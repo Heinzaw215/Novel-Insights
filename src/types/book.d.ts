@@ -4,11 +4,10 @@ export interface Book {
   bookCover: string;
   author: string;
   releasedDate: number | Date;
-  categories: Array<string>;
+  genres: Array<string>;
   description: string;
   rating: number;
   price:number;
-  isAvailable: boolean;
 }
 
 const genreIcons: { [key: string]: string } = {

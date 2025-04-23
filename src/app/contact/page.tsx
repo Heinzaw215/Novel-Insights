@@ -4,7 +4,7 @@ import React from 'react'
 
 const ContactPage = () => {
   return (
-    <div>ContactPage
+    <div>
       <FooterAbout title="About Us" content={aboutText} />
       <FooterNewsletter
         heading={newsletterConfig.heading}

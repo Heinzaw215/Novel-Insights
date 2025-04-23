@@ -23,5 +23,9 @@ export default function Home() {
     return <LoadingSpinner />; // or a loading spinner if you want
   }
 
-  return <div>{isNewUser ? <LandingPage /> : <HomePage />}</div>;
+  return (
+    <div>
+      <LandingPage />
+      <HomePage />
+    </div>);
 };

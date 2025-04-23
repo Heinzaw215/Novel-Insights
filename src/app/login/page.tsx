@@ -8,6 +8,7 @@ import { FaEye, FaEyeSlash, FaMoon, FaSun } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import { useTheme } from '@/components/ThemeProvider';
 import SubmitButton from '@/components/Login/SubmitButton';
+// import LoginInput from '@/components/LoginInput';
 
 // Schema
 const loginSchema = z.object({
@@ -114,16 +115,7 @@ export default function LoginForm() {
         </button>
       </div>
 
-      <div className='grid grid-cols-1'>
-        <label htmlFor="username" className='mb-1 font-medium'>Username:</label>
-        <input
-          id='username'
-          type="text"
-          {...register("username")}
-          className="inline w-full border border-gray-300 px-3 py-2 rounded mt-1" required aria-required
-        />
-        {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username.message}</p>}
-      </div>
+      {/* <LoginInput /> */}
 
       <div>
         {/* Age */}

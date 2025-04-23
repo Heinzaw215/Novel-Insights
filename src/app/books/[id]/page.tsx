@@ -3,14 +3,13 @@
 import React, { useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { BookList } from '@/data/bookData';
-import BookInfoItem from '@/components/BookCard/BookInfoItem';
 import BookImage from '@/components/BookCard/BookImage';
 
 const BookDetailPage = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const router = useRouter();
 
-  const book = useMemo(() => BookList.find((book) => book.id === Number(id)), [id]);
+  const book = useMemo(() => BookList.find((book) => book.slug === Number(slug)), [slug]);
 
   if (!book) {
     return (
@@ -29,36 +28,36 @@ const BookDetailPage = () => {
           <BookImage src={book.bookCover} alt={book.name} />
         </div>
         <div className="flex flex-col justify-center items-start p-6 sm:p-10 space-y-5 max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-8 text-amber-800 text-center drop-shadow-md leading-tight">
-            {book.name}
-          </h1>
-
           <article className="space-y-3 text-base sm:text-medium leading-relaxed">
-            <BookInfoItem label="Author" value={<span className='whitespace-pre-line'>{book.author}</span>} />
-            <BookInfoItem label="Released Date" value={
-              <span className='whitespace-pre-line'>
-                {book.releasedDate.toString()}
-              </span>
-            } />
-            <BookInfoItem label="Categories" value={book.categories.join(', ')} />
-            <BookInfoItem
-              label="Description"
-              value={
-                <span className="max-h-60 overflow-y-auto pr-1 whitespace-pre-line">
-                  {book.description}
-                </span>
-              }
-            />
-            <BookInfoItem label="Rating" value={`${book.rating} / 5`} />
-
-            <BookInfoItem
-              label="Available"
-              value={book.isAvailable ? 'Yes' : 'No'}
-              className={book.isAvailable ? 'text-green-500' : 'text-red-500'}
-            />
 
 
+            <div className='flex items-center p-2 bg-neutral-300 rounded-t-[20px]'>
+              <h2 className="text-[1.8rem] font-extrabold text-gray-800 w-2/3 text-left">{book.name}</h2>
+              <div className='w-1/3'>
+                <p className='text-[1.6rem] font-medium text-green-500'>${book.price}</p>
+                <p className='text-[1.2rem] font-medium text-yellow-800'>⭐{book.rating} / 5</p>
+              </div>
+            </div>
+            <div className='bg-neutral-400 text-white font-semibold tracking-wsluger rounded-b-[20px]'>
+              <p>{book.genres.join(", ")}</p>
+            </div>
+            <div className='my-3 text-xl'>
+              <p>{book.description}</p>
+            </div>
           </article>
+        </div>
+
+        <div className="grslug grslug-rows-1 grslug-cols-2 npm gap-1">
+          <div className='border rounded-xl p-1'>
+            <p className='font-bold'>Author</p>
+            <p>{book.author}</p>
+          </div>
+          <div className='border rounded-xl p-1'>
+            <h2 className='font-semibold'>Released Date</h2>
+            <p>{book.releasedDate}</p>
+          </div>
+
+
 
           <div className="flex justify-center flex-wrap">
             <button type='button'

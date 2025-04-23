@@ -2,10 +2,9 @@
 
 import React from 'react';
 import useLoading from '@/hooks/isLoading';
-import LoadingSpinner from './loading';
-// import BookList from '@/components/BookCard/BookList';
-// import { BookList as booksFromDB } from '@/data/bookData';
-import GradientOverlay from '@/components/misc/GradientOverlay';
+import BookList from '@/components/BookCard/BookList';
+import { BookList as booksFromDB } from '@/data/bookData';
+import {GradientOverlay, LoadingSpinner} from '@/components/misc';
 import SectionHeader from '@/components/SectionHeader';
 // import BookFilter from '@/components/BookCard/BookFilter';
 
@@ -69,7 +68,7 @@ const MainBookPage = () => {
           onFilter={handleFilter}
           categories={allCategories}
         /> */}
-        {/* <BookList books={books}/> */}
+         <BookList books={booksFromDB}/>
       </div>
     </section >
   );
