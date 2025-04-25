@@ -55,7 +55,7 @@ const ReviewList = ({ initialLimit = 12, loadMoreCount = 12 }: ReviewListProps) 
               Show More
             </button>
           ) : (
-            <p className="text-gray-500 text-sm mt-2">No more contents to show.</p>
+            <p className="text-gray-800 text-md mt-2">--- No more contents to show. ---</p>
           )}
         </div>
       </>

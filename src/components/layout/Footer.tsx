@@ -15,9 +15,9 @@ const Footer = () => {
     >
       <div className="container mx-full px-4">
         {/* Grid layout for better stacking on small screens */}
-        <div className="grid grid-cols-3 w-full mb-2">
+        <div className="grid grid-cols-3 grid-rows-1 text-center w-full mb-2">
           <FooterAbout title="About Us" content={aboutText} />
-          <FooterContact title="Contact Us" contactItems={contactItems} /> <br />
+          <FooterContact title="Contact Us" contactItems={contactItems} />
           <FooterSocial title="Follow Us" socials={socialLinks} />
         </div>
 
