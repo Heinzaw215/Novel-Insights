@@ -2,12 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { PrimaryLinks } from "../NavBar/PrimaryLinks";
-import MobileMenuToggle from "../NavBar/MobileMenuToggle";
-import { MobileMenu } from "../NavBar/MobileMenu";
+import { PrimaryLinks, MobileMenu, MobileMenuToggle } from "../NavBar";
 import { motion } from "framer-motion";
 import { NavBarConfig } from '@/config/navBarConfig';
-
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
