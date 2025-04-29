@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { LandingPage, HomePage } from "@/components/layout";
 import LoadingSpinner from "@/components/misc/LoadingSpinner";
-import ThreeBook from "@/components/ThreeBook";
 
 export default function Home() {
   const [isNewUser, setIsNewUser] = useState<boolean | null>(null);
@@ -28,6 +27,5 @@ export default function Home() {
     <div>
       <LandingPage />
       <HomePage />
-      <ThreeBook />
     </div>);
 };
