@@ -86,7 +86,7 @@ export default function LoginForm() {
       });
 
       console.log('Login success:', result);
-    } catch (error) {
+    } catch {
       toast.error('Invalid credentials', {
         style: {
           background: '#fee2e2',

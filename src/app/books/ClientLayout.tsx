@@ -1,9 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import NavBar from "@/components/layout/NavBar";
-import Footer from "@/components/layout/Footer";
-import { ScrollToTopButton } from "@/components/Footer";
+import { NavBar, Footer } from "@/components/layout/NavBar";
+import { ScrollToTopButton } from "@/components/misc";
 
 export default function ClientLayout({
   children,

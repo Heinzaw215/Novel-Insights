@@ -3,11 +3,12 @@ export interface Book {
   name: string;
   bookCover: string;
   author: string;
-  releasedDate: number | Date;
+  releasedDate: number;
   genres: Array<string>;
   description: string;
   rating: number;
   price:number;
+  slug: string;
 }
 
 const genreIcons: { [key: string]: string } = {

@@ -14,7 +14,7 @@ type FooterContactProps = {
 
 const FooterContact = ({ title, contactItems }: FooterContactProps) => (
   <section className="w-full px-4 text-center" aria-labelledby="footer-contact-title">
-    <h5 className="text-xl font-serif text-gray-900 font-semibold mb-4">{title}</h5>
+    <h5 className="text-[1.5rem] font-serif text-gray-900 font-semibold mb-4">{title}</h5>
     <ul className="space-y-4 text-gray-800">
       {contactItems.map(({ icon: Icon, label, link }, index) => (
         <li key={index} className="flex items-center gap-3">

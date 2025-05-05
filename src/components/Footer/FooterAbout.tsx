@@ -10,7 +10,7 @@ const FooterAbout = ({ title, content }: FooterAboutProps) => (
   >
     <h5
       id="footer-about-title"
-      className="text-xl text-center font-serif text-gray-900 font-semibold mb-4"
+      className="text-[1.5rem] text-center font-serif text-gray-900 font-semibold mb-4"
     >
       {title}
     </h5>

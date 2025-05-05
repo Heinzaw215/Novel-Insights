@@ -9,7 +9,7 @@ interface BackButtonProps {
   className?: string;
 }
 
-const BackButton: React.FC<BackButtonProps> = ({ label = "Back", className = "" }) => {
+const BackButton: React.FC<BackButtonProps> = ({ label = "Go Back", className = "" }) => {
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimationOut, setIsAnimationOut] = useState(false);
@@ -41,7 +41,7 @@ const BackButton: React.FC<BackButtonProps> = ({ label = "Back", className = "" 
         ${isAnimationOut ? "translate-x-10 opacity-0" : ""}
         ${className}
       `}
-      aria-label="Go back"
+      aria-label={label}
     >
       <FaArrowLeft />
     </button>

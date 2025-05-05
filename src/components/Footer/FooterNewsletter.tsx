@@ -1,9 +1,8 @@
-// FooterNewsletter.tsx
-import { z } from "zod";
-const NewsLetterSchmea = z.object({
-  email: z.string().email()
-  .nonempty("Enter your email.")
-})
+// import { z } from "zod";
+// const NewsLetterSchmea = z.object({
+//   email: z.string().email()
+//   .nonempty("Enter your email.")
+// })
 
 type FooterNewsletterProps = {
   heading: string;
@@ -17,7 +16,6 @@ const FooterNewsletter = ({
   description,
   placeholder,
   buttonLabel,
-  register,
 }: FooterNewsletterProps) => (
   <section className="bg-orange-400 rounded-xl p-8 text-center shadow-lg mb-10">
     <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">{heading}</h3>

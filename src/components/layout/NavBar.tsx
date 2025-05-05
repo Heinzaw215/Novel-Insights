@@ -14,7 +14,7 @@ const NavBar = () => {
 
   return (
     <motion.header
-      className="relative bg-amber-500 text-black shadow-2xl dark:text-black dark:bg-amber-400 dark:shadow-none"
+      className="sticky bg-amber-500 text-black shadow-2xl dark:text-black dark:bg-amber-400 dark:shadow-none"
       aria-label="Main Navigation"
     >
       <div className="container mx-auto max-w-7xl flex justify-between items-center px-6 py-4">

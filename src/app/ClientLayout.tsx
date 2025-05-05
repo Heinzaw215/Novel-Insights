@@ -12,7 +12,7 @@ const MemoizedFooter = React.memo(Footer);
 
 // Helper function to check if layout should be displayed
 const shouldShowLayout = (path: string) => {
-  return !["/", "/login", "/error", "/threejs"].includes(path);
+  return !["/login", "/error", "/threejs"].includes(path);
 };
 
 export default function ClientLayout({

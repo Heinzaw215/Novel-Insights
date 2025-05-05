@@ -11,6 +11,7 @@ export const BookList: Book[] = [
     description: "A young boy discovers he is a wizard and attends a magical school.",
     rating: 4.9,
     price: 10.99,
+    slug: "harry-potter-and-the-philosopher's-stone",
   },
   { // Book 2 (The Hobbit)
     id: 2,
@@ -22,6 +23,7 @@ export const BookList: Book[] = [
     description: "A hobbit embarks on an epic journey to reclaim a lost treasure guarded by a dragon.",
     rating: 4.8,
     price: 9.99,
+    slug: "the-hobbit",
   },
   { // Book 3 (1984)
     id: 3,
@@ -33,6 +35,7 @@ export const BookList: Book[] = [
     description: "A chilling depiction of a totalitarian regime and its impact on society.",
     rating: 4.7,
     price: 8.99,
+    slug: "1984",
   },
   { // Book 4 (To Kill a Mockingbird)
     id: 4,
@@ -44,6 +47,7 @@ export const BookList: Book[] = [
     description: "A story of racial injustice and moral growth in the American South.",
     rating: 4.9,
     price: 7.99,
+    slug: "to-kill-a-mockingbird",
   },
   { // Book 5 (The Great Gatsby)
     id: 5,
@@ -55,6 +59,7 @@ export const BookList: Book[] = [
     description: "A critique of the American Dream set in the Roaring Twenties.",
     rating: 4.5,
     price: 8.49,
+    slug: "the-great-gatsby",
   },
   { // Book 6 (Pride and Prejudice)
     id: 6,
@@ -66,6 +71,7 @@ export const BookList: Book[] = [
     description: "A witty exploration of love, class, and social expectations in 19th-century England.",
     rating: 4.6,
     price: 6.99,
+    slug: "pride-and-prejudice",
   },
   { // Book 7 (The Catcher in the Rye)
     id: 7,
@@ -77,6 +83,7 @@ export const BookList: Book[] = [
     description: "A teenager's journey through angst and alienation in post-war America.",
     rating: 4.3,
     price: 7.49,
+    slug: "the-catcher-in-the-rye",
   },
   { // Book 8 (The Alchemist)
     id: 8,
@@ -88,6 +95,7 @@ export const BookList: Book[] = [
     description: "A shepherd's journey to discover his personal legend and fulfill his dreams.",
     rating: 4.8,
     price: 9.49,
+    slug: "the-alchemist",
   },
   { // Book 9 (The Lord of the Rings: The Fellowship of the Ring)
     id: 9,
@@ -99,6 +107,7 @@ export const BookList: Book[] = [
     description: "The first part of an epic tale of friendship, courage, and the battle against evil.",
     rating: 4.9,
     price: 12.99,
+    slug: "the-lord-of-the-rings-fellowship-of-the-ring",
   },
   { // Book 10 (The Da Vinci Code)
     id: 10,
@@ -110,6 +119,7 @@ export const BookList: Book[] = [
     description: "A symbologist unravels a conspiracy hidden in famous works of art.",
     rating: 4.4,
     price: 11.99,
+    slug: "the-da-vinci-code",
   },
   { // Book 11 (The Art of not Giving a F*ck)
     id: 11,
@@ -121,6 +131,7 @@ export const BookList: Book[] = [
     description: "A counterintuitive approach to living a good life, focusing on what truly matters.",
     rating: 4.5,
     price: 10.49,
+    slug: "the-subtle-art-of-not-giving-a-f_ck",
   },
   { // Book 12 (The Secret)
     id: 12,
@@ -132,6 +143,7 @@ export const BookList: Book[] = [
     description: "A guide to the law of attraction and how to manifest your desires.",
     rating: 4.6,
     price: 8.99,
+    slug: "the-secret",
   },
   { // Book 13 (The Hunger Games)
     id: 13,
@@ -143,6 +155,7 @@ export const BookList: Book[] = [
     description: "A dystopian novel where children are forced to compete in a deadly televised game.",
     rating: 4.7,
     price: 10.99,
+    slug: "the-hunger-games",
   },
   { // Book 14 (The series of unfortunate events - The Bad Beginning)
     id: 14,
@@ -154,6 +167,7 @@ export const BookList: Book[] = [
     description: "A darkly humorous tale of three orphans and their misadventures with a villainous guardian.",
     rating: 4.5,
     price: 8.49,
+  slug: "a-series-of-unfortunate-events-1-the-bad-beginning",
   },
   { // Book 15 (The series of unfortunate events - The Reptile Room)
     id: 15,
@@ -165,6 +179,7 @@ export const BookList: Book[] = [
     description: "A darkly humorous tale of three orphans and their misadventures with a villainous guardian.",
     rating: 4.4,
     price: 8.49,
+    slug: "a-series-of-unfortunate-events-2-the-reptile-room",
   },
   {
     id: 16,
@@ -176,6 +191,7 @@ export const BookList: Book[] = [
     description: "A symbologist unravels a conspiracy hidden in famous works of art.",
     rating: 4.4,
     price: 8.49,
+    slug: "the-secret",
   },
   {
     id: 17,
@@ -185,7 +201,8 @@ export const BookList: Book[] = [
     releasedDate: 2003,
     genres: ["Thriller", "Mystery"],
     description: "A symbologist unravels a conspiracy hidden in famous works of art.",
-    rating: 4.4,
+    rating: 0.9,
     price: 8.49,
+    slug: "the-secret",
   },
 ];

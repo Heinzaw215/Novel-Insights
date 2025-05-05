@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash, FaLock } from "react-icons/fa";
 
+import { ChangeEvent } from "react";
+
 export default function PasswordInput({
   id = "password",
   name = "password",
@@ -8,6 +10,13 @@ export default function PasswordInput({
   placeholder = "Enter your password",
   required = false,
   onChange,
+}: {
+  id?: string;
+  name?: string;
+  label?: string;
+  placeholder?: string;
+  required?: boolean;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }) {
   const [showPassword, setShowPassword] = useState(false);
 

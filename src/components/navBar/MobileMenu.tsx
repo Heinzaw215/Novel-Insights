@@ -16,7 +16,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ id, isOpen, onClose }) =
       className={`md:hidden absolute top-full left-0 w-full  text-white shadow-lg z-50 transition-transform duration-300 ease-in-out transform ${
         isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       } origin-top`}
-      aria-hidden={!isOpen} // Hide from screen readers when closed
     >
       <nav className="bg-amber-700" aria-label="Mobile Navigation">
         <ul className="flex flex-col divide-amber-700">

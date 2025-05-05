@@ -4,7 +4,7 @@ import React from 'react';
 import useLoading from '@/hooks/isLoading';
 import BookList from '@/components/BookCard/BookList';
 import { BookList as booksFromDB } from '@/data/bookData';
-import {GradientOverlay, LoadingSpinner} from '@/components/misc';
+import { LoadingSpinner } from '@/components/misc';
 import SectionHeader from '@/components/SectionHeader';
 // import BookFilter from '@/components/BookCard/BookFilter';
 
@@ -46,16 +46,6 @@ const MainBookPage = () => {
 
   return (
     <section className="flex flex-col relative items-center min-h-screen pb-6 bg-gradient-to-b from-amber-800 to-amber-700">
-      <GradientOverlay
-        as="div"
-        className="bg-gradient-to-b"
-        direction="to-l"
-        from="from-amber-800/50"
-        via="via-transparent"
-        to="to-amber-700/80"
-        zIndex="z-0"
-      />
-
       <div className="relative z-10 text-center p-4 w-full mx-auto">
         <SectionHeader
           title='Explore Our Book Collection'
@@ -68,7 +58,7 @@ const MainBookPage = () => {
           onFilter={handleFilter}
           categories={allCategories}
         /> */}
-         <BookList books={booksFromDB}/>
+        <BookList books={booksFromDB} />
       </div>
     </section >
   );
