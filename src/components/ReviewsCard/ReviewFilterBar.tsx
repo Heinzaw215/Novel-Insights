@@ -31,7 +31,7 @@ const ReviewFilterBar = ({
       <div className=""
         aria-label="Filter by genre">
         <button type='button' className='bg-amber-100 p-6 rounded-full hover:bg-amber-400'
-        onClick={console.log("Clicked.")}>All Genres</button>
+        onClick={() => console.log("Clicked.")}>All Genres</button>
         <button type='button'>Fiction</button>
         <button type='button'>Mystery</button>
         <button type='button'>Romance</button>

@@ -11,7 +11,7 @@ const ReviewDetails = ({ title, excerpt, rating, reviewer, date, genres }: Revie
     <p className="text-gray-800">{excerpt}</p>
     <div className="flex flex-wrap gap-2">
       {genres.map((genre, i) => (
-        <GenreTag key={i} genre={genre} />
+        <GenreTag key={i} label={genre} />
       ))}
     </div>
   </div>
