@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 
 export function useReturnFocus(
-  active: boolean,
+  isOpen: boolean,
   triggerRef: React.RefObject<HTMLElement>
 ) {
   useEffect(() => {
-    if (!active && triggerRef.current) {
+    if (!isOpen && triggerRef.current) {
       triggerRef.current.focus();
     }
-  }, [active, triggerRef]);
+  }, [isOpen, triggerRef]);
 }

@@ -11,7 +11,7 @@ import { useReturnFocus } from "@/hooks/useReturnFocus";
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const toggleButtonRef = useRef<HTMLButtonElement>(null);
+  const toggleButtonRef = useRef<HTMLElement>(null);
 
   const toggleMobile = () => setMobileOpen((prev) => !prev);
   const closeMobile = () => setMobileOpen(false);
@@ -20,7 +20,7 @@ const NavBar = () => {
   useEscapeToClose(closeMobile, mobileOpen);
 
   // Return focus to toggle button when menu closes
-  useReturnFocus(toggleButtonRef, mobileOpen);
+  useReturnFocus(mobileOpen, toggleButtonRef);
   return (
     <motion.header
       className="relative bg-amber-500 text-black shadow-2xl dark:text-black dark:bg-amber-400 dark:shadow-none"
@@ -45,6 +45,7 @@ const NavBar = () => {
 
         {/* Mobile Menu Toggle Button */}
         <MobileMenuToggle
+          ref={toggleButtonRef}
           isOpen={mobileOpen}
           onClick={toggleMobile}
           aria-expanded={mobileOpen ? "true" : "false"}

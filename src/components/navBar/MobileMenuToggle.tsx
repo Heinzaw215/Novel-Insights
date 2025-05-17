@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler, forwardRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 interface MobileMenuToggleProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -9,11 +9,12 @@ interface MobileMenuToggleProps extends React.ButtonHTMLAttributes<HTMLButtonEle
   iconColor?: string;
 }
 
-const MobileMenuToggle: React.FC<MobileMenuToggleProps> = React.memo(
-  ({ isOpen, onClick, className = '', iconSize = 'text-3xl', iconColor = 'text-white', ...props }) => {
+const MobileMenuToggle= forwardRef<HTMLButtonElement,MobileMenuToggleProps> (
+  ({ isOpen, onClick, className = '', iconSize = 'text-3xl', iconColor = 'text-white', ...props },ref) => {
     return (
       <button
         type="button"
+        ref={ref}
         className={`md:hidden focus:outline-none focus:ring-2 focus:ring-amber-800 focus:ring-offset-2 focus:ring-offset-amber-200 rounded-md p-2 bg-amber-600 hover:bg-amber-700 transition duration-200 ease-in-out ${className}`}
         onClick={onClick}
         aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
