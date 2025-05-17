@@ -23,7 +23,7 @@ const NavBar = () => {
   useReturnFocus(toggleButtonRef, mobileOpen);
   return (
     <motion.header
-      className="sticky bg-amber-500 text-black shadow-2xl dark:text-black dark:bg-amber-400 dark:shadow-none"
+      className="relative bg-amber-500 text-black shadow-2xl dark:text-black dark:bg-amber-400 dark:shadow-none"
       aria-label="Main Navigation"
     >
       <div className="container mx-auto max-w-7xl flex justify-between items-center px-6 py-4">
@@ -56,7 +56,7 @@ const NavBar = () => {
         id="mobile-menu"
         isOpen={mobileOpen}
         onClose={closeMobile}
-        className={`transition-all duration-300 ease-in-out transform ${mobileOpen ? "translate-x-0" : "translate-x-full"
+        className={`${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
       />
     </motion.header>
