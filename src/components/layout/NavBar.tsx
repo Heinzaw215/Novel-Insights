@@ -1,17 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
-import { PrimaryLinks, MobileMenu, MobileMenuToggle } from "../NavBar";
+import { PrimaryLinks, MobileMenu, MobileMenuToggle } from "@/components/NavBar";
 import { motion } from "framer-motion";
 import { NavBarConfig } from '@/config/navBarConfig';
+import { useEscapeToClose } from "@/hooks/useEscapeToClose";
+import { useReturnFocus } from "@/hooks/useReturnFocus";
+
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
   const toggleMobile = () => setMobileOpen((prev) => !prev);
   const closeMobile = () => setMobileOpen(false);
 
+  // Close Menu when Escape key Pressed
+  useEscapeToClose(closeMobile, mobileOpen);
+
+  // Return focus to toggle button when menu closes
+  useReturnFocus(toggleButtonRef, mobileOpen);
   return (
     <motion.header
       className="sticky bg-amber-500 text-black shadow-2xl dark:text-black dark:bg-amber-400 dark:shadow-none"
@@ -21,14 +30,16 @@ const NavBar = () => {
         {/* Logo or Brand Name */}
         <Link
           href="/"
-          className="text-4xl uppercase font-bold hover:text-orange-500 transition-all duration-300"
-          title="Go to homepage"
+          className="text-4xl uppercase font-bold hover:text-orange-500
+          transition-all duration-300"
+          title="Go to Homepage"
+          aria-label="Go to HomePage"
         >
           {NavBarConfig.pageName}
         </Link>
 
         {/* Primary Navigation Links */}
-        <ul className="hidden md:flex gap-x-8 text-[20px] text-black transition-colors duration-300">
+        <ul className="hidden md:flex gap-x-4 font-medium  text-xl text-black transition-colors duration-300">
           <PrimaryLinks />
         </ul>
 
@@ -45,13 +56,12 @@ const NavBar = () => {
         id="mobile-menu"
         isOpen={mobileOpen}
         onClose={closeMobile}
-        className={`transition-all duration-300 ease-in-out transform ${
-          mobileOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`transition-all duration-300 ease-in-out transform ${mobileOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       />
     </motion.header>
   );
 };
 
 // Memoizing NavBar for performance optimization
-export default React.memo(NavBar);
+export default NavBar;

@@ -3,7 +3,7 @@
 import React from 'react';
 import useLoading from '@/hooks/isLoading';
 import BookList from '@/components/BookCard/BookList';
-import { BookList as booksFromDB } from '@/data/bookData';
+import { BooksData } from '@/data/bookData';
 import { LoadingSpinner } from '@/components/misc';
 import SectionHeader from '@/components/SectionHeader';
 // import BookFilter from '@/components/BookCard/BookFilter';
@@ -58,7 +58,7 @@ const MainBookPage = () => {
           onFilter={handleFilter}
           categories={allCategories}
         /> */}
-        <BookList books={booksFromDB} />
+        <BookList books={BooksData} />
       </div>
     </section >
   );

@@ -1,16 +1,13 @@
-type FooterAboutProps = {
-  title: string;
-  content: string;
-};
+import { FooterAboutProps } from "@/schemas/footer";
 
 const FooterAbout = ({ title, content }: FooterAboutProps) => (
   <section
-    className="w-full px-4"
+    className="w-full px-4 rows-span-2 md:rows-span-1"
     aria-labelledby="footer-about-title"
   >
     <h5
       id="footer-about-title"
-      className="text-[1.5rem] text-center font-serif text-gray-900 font-semibold mb-4"
+      className="text-[1.5rem] text-center text-gray-900 font-semibold mb-4"
     >
       {title}
     </h5>

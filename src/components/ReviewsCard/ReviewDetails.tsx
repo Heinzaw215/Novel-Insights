@@ -1,7 +1,7 @@
 import ReviewerInfo from './ReviewerInfo';
 import StarRating from './StarRating';
 import GenreTag from './GenreTag';
-import { Review } from '@/types/reviews';
+import { Review } from '@/schemas/reviews';
 
 const ReviewDetails = ({ title, excerpt, rating, reviewer, date, genres }: Review) => (
   <div className="bg-yellow-100 p-6 rounded-lg shadow-lg space-y-3">

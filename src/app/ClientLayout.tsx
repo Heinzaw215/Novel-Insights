@@ -1,8 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import NavBar from "@/components/layout/NavBar";
-import Footer from "@/components/layout/Footer";
+import { NavBar, Footer } from "@/components/layout";
 import ScrollToTopButton from "@/components/misc/ScrollToTopButton";
 import React from "react";
 
@@ -12,7 +11,7 @@ const MemoizedFooter = React.memo(Footer);
 
 // Helper function to check if layout should be displayed
 const shouldShowLayout = (path: string) => {
-  return !["/login", "/error", "/threejs"].includes(path);
+  return ["/","/books","/books/[slug]","/contact"].includes(path);
 };
 
 export default function ClientLayout({

@@ -1,18 +1,29 @@
+import Link from "next/link";
+
 const FooterBottom = () => (
-  <div className="text-center text-sm md:text-base text-gray-900 mt-10 pt-6 border-t border-yellow-400 space-y-2">
+  <section 
+  className="text-center text-sm md:text-base text-gray-900 mt-10 pt-4 pb-2 border-t border-yellow-400 space-y-2">
     <div>
-      &copy; {new Date().getFullYear()}{' '}
-      <span className="font-medium hover:text-orange-600 transition-colors duration-300">
+      <span
+        className="font-semibold hover:text-orange-600 transition-colors duration-300"
+        title="Go to GitHub Source Code"
+      >
         Novel Insights
-      </span>. All rights reserved.
+      </span> &copy; {new Date().getFullYear()}{' '}. All rights reserved.
     </div>
+
     <div>
       Designed and Developed by{' '}
-      <span className="font-medium hover:text-orange-600 transition-colors duration-300">
+      <Link
+        href='#'
+        className="font-bold text-lg hover:text-orange-600 transition-colors duration-300"
+        title="Go To HeinzZaw Github Page"
+        aria-label="Go To HeinzZaw Github Page"
+      >
         HeinzZaw
-      </span>
+      </Link>
     </div>
-  </div>
+  </section>
 );
 
 export default FooterBottom;

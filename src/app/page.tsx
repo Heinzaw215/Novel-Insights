@@ -26,6 +26,6 @@ export default function Home() {
   return (
     <div>
       <LandingPage />
-      <HomePage />
+      {/* <HomePage /> */}
     </div>);
 };

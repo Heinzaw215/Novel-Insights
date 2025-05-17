@@ -16,13 +16,13 @@ export const PrimaryLinks = () => {
           <li key={id}>
             <Link
               href={href}
-              className={`transition duration-300 px-2 py-1 border-b-2 text-[24px] ${
+              className={`transition duration-300 px-2 py-1 border-b-2 text-2xl hover:font-semibold ${
                 isActive
                   ? "text-orange-600 font-bold border-orange-600"
                   : "hover:text-orange-800 border-transparent"
               }`}
               title={`Go to ${label} Page`}
-              aria-current={isActive ? "page" : undefined}
+              aria-current={isActive ? 'page' : undefined}
             >
               {label}
             </Link>

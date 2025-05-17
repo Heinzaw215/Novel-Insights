@@ -12,7 +12,7 @@ export default function ClientLayout({
   const pathName = usePathname();
 
   // Show NavBar/Footer ONLY on specific routes
-  const showLayout = !["/about", "/contact", "/books"].includes(pathName);
+  const showLayout = !["/about", "/contact"].some((route) => pathName.startsWith(route));
 
   return (
     <>

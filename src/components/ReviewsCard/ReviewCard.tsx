@@ -2,7 +2,7 @@ import React from 'react';
 import StarRating from './StarRating';
 import ReviewerInfo from './ReviewerInfo';
 import GenreTag from './GenreTag';
-import { Review } from '@/types/reviews'
+import { Review } from '@/schemas/reviews'
 
 const ReviewCard = ({ title, excerpt, rating, reviewer, date, genres }: Review) => (
   <div className="bg-yellow-100 rounded-2xl shadow-lg p-6 space-y-4 hover:scale-105 hover:shadow-xl transition">

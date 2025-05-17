@@ -4,9 +4,8 @@ const landingContent = {
     `Dive into insightful reviews, uncover hidden gems `,
     `and explore the world of literature like never before.`,
   ],
+  landingCTA: `Explore Books`,
 };
-
-export const landingCTA = `Explore Books`;
 
 export const landingConfig = {
   default: {

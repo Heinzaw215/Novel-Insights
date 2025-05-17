@@ -30,17 +30,16 @@ const LandingPage = () => {
 
         <motion.div
           className="text-overlay relative p-2"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0.25, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 2 }}
         >
           <SectionHeader
             title={title}
-            titleStyle="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-yellow-400"
+            titleStyle="text-3xl lg:text-6xl font-extrabold text-yellow-400 mb-2"
             subtitle={subtitle}
-            subtitleStyle="text-yellow-200 text-base sm:text-lg lg:text-xl font-medium"
+            subtitleStyle="text-yellow-200 text-lg lg:text-xl font-medium mb-1"
           />
-
           <DefaultCTA />
         </motion.div>
       </div>

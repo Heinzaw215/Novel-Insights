@@ -2,9 +2,13 @@
 @import "tailwindcss";
 
 body {
-  @apply m-0 p-0 font-serif box-border bg-amber-600;
+  @apply m-0 p-0 box-border bg-amber-600;
+  
 }
 
+* {
+  font-family: 'Merriweather', serif;
+}
 @layer components {
   .image-wrapper {
     @apply flex-center;
@@ -81,7 +85,6 @@ body {
 @utility flex-evenly {
   @apply flex justify-evenly items-center;
 }
-
 
 .BookInfoItem {
   @apply flex items-center py-4 my-2;

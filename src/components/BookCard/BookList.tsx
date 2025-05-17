@@ -1,5 +1,5 @@
 // components/BookList.tsx
-import { Book } from '@/types/book';
+import { Book } from '@/schemas/book';
 import BookCard from './BookCard';
 
 type BookListProps = {
