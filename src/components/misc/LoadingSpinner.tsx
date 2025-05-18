@@ -1,9 +1,29 @@
-// components/LoadingSpinner.tsx
+import React from "react";
 
-const LoadingSpinner = () => {
+interface LoadingSpinnerProps {
+  text?: string;
+  size?: number; // size in pixels
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  text = "Loading...",
+  size = 64,
+  className = "",
+}) => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="animate-spin rounded-full border-t-4 border-white w-16 h-16"></div>
+    <div className="flex flex-col items-center justify-center min-h-screen gap-4">
+      <div
+        className={`relative`}
+        style={{ width: size, height: size }}
+      >
+        <div
+          className={`absolute inset-0 rounded-full border-4 border-t-transparent animate-spin 
+          border-gradient border-gradient-to-tr from-amber-400 via-orange-500 to-red-500 ${className}`}
+        ></div>
+        <div className="absolute inset-2 rounded-full bg-amber-50 dark:bg-zinc-900"></div>
+      </div>
+      <p className="text-xl font-medium text-zinc-600 dark:text-zinc-300 animate-pulse">{text}</p>
     </div>
   );
 };

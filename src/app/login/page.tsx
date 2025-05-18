@@ -117,78 +117,84 @@ export default function LoginForm() {
 
       {/* <LoginInput /> */}
 
-      <div>
         {/* Age */}
-        <label htmlFor="age" className='block mb-1 font-medium'>Age:</label>
-        <input
-          id='age'
-          type="text"
-          {...register("age")}
-          className="w-full border border-gray-300 px-3 py-2 rounded mt-1"
-        />
-        {errors.age && <p className="text-red-500 text-sm mt-1">{errors.age.message}</p>}
-      </div>
+        <div>
+          <label htmlFor="age" className="block mb-1 font-medium text-gray-900 dark:text-gray-100">
+            Age:
+          </label>
+          <input
+            id="age"
+            type="text"
+            {...register("age")}
+            className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-3 py-2 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {errors.age && <p className="text-red-500 text-sm mt-1">{errors.age.message}</p>}
+        </div>
 
-      <div>
         {/* Email */}
-        <label htmlFor="email" className="block mb-1 font-medium">Email</label>
-        <input
-          id="email"
-          type="email"
-          {...register('email')}
-          className="w-full border border-gray-300 px-3 py-2 rounded mt-1"
-          placeholder="you@example.com"
-        />
-        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
-      </div>
+        <div>
+          <label htmlFor="email" className="block mb-1 font-medium text-gray-900 dark:text-gray-100">
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            {...register('email')}
+            placeholder="you@example.com"
+            className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-3 py-2 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+        </div>
 
-      {/* Password */}
-      <div className="relative">
-        <label htmlFor="password" className="block mb-1 font-medium">Password</label>
-        <input
-          id="password"
-          type={showPassword ? 'text' : 'password'}
-          {...register('password')}
-          value={passwordInput}
-          onChange={(e) => setPasswordInput(e.target.value)}
-          className="w-full border border-gray-300 px-3 py-2 rounded pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <button
-          type="button"
-          onClick={togglePasswordVisibility}
-          className="absolute inset-y-0 right-3 flex items-center bg-transparent px-2 text-gray-500 hover:text-blue-600"
-          aria-label={showPassword ? 'Hide password' : 'Show password'}
-        >
-          {showPassword ? <FaEyeSlash /> : <FaEye />}
-        </button>
-        {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
+        {/* Password */}
+        <div className="relative">
+          <label htmlFor="password" className="block mb-1 font-medium text-gray-900 dark:text-gray-100">
+            Password
+          </label>
+          <input
+            id="password"
+            type={showPassword ? 'text' : 'password'}
+            {...register('password')}
+            value={passwordInput}
+            onChange={(e) => setPasswordInput(e.target.value)}
+            className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-3 py-2 rounded pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="button"
+            onClick={togglePasswordVisibility}
+            className="absolute inset-y-0 right-3 flex items-center bg-transparent px-2 text-gray-500 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+            aria-label={showPassword ? 'Hide password' : 'Show password'}
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </button>
+          {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
 
-        {/* Strength Meter */}
-        {passwordInput && strength && (
-          <div className="mt-2">
-            <div className="h-2 w-full rounded bg-gray-200">
-              <div
-                className={`h-2 rounded ${strength.color} transition-all duration-300`}
-                style={{ width: `${strength.value}%` }}
-              />
+          {/* Strength Meter */}
+          {passwordInput && strength && (
+            <div className="mt-2">
+              <div className="h-2 w-full rounded bg-gray-200 dark:bg-gray-600">
+                <div
+                  className={`h-2 rounded ${strength.color} transition-all duration-300`}
+                  style={{ width: `${strength.value}%` }}
+                />
+              </div>
+              <p className={`text-sm mt-1 ${strength.color.replace('bg-', 'text-')}`} aria-live="polite">
+                Strength: {strength.label}
+              </p>
             </div>
-            <p className={`text-sm mt-1 ${strength.color.replace('bg-', 'text-')}`} aria-live="polite">
-              Strength: {strength.label}
-            </p>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
 
-      {/* Remember me & forgot password */}
-      <div className="flex items-center justify-between">
-        <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
-          <input type="checkbox" {...register('remember')} className="accent-blue-600" />
-          Remember me
-        </label>
-        <a href="#" className="text-sm text-blue-600 hover:underline">
-          Forgot password?
-        </a>
-      </div>
+        {/* Remember me & forgot password */}
+        <div className="flex items-center justify-between">
+          <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <input type="checkbox" {...register('remember')} className="accent-blue-600" />
+            Remember me
+          </label>
+          <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline">
+            Forgot password?
+          </a>
+        </div>
 
       {/* Submit */}
       <SubmitButton isSubmitting={isSubmitting} />

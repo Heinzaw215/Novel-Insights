@@ -241,47 +241,4 @@ export const BooksData: Book[] = [
     isFeatured: true,
     isBestSeller: true,
   },
-  {
-    // Book 15 (The series of unfortunate events - The Reptile Room)
-    bookID: 15,
-    bookName: "The series of unfortunate events - The Reptile Room",
-    bookCover: "/the-secret.jpg",
-    author: "Lemony Snicket",
-    releasedDate: 2003,
-    genres: ["Adventure", "Mystery"],
-    description:
-      "A darkly humorous tale of three orphans and their misadventures with a villainous guardian.",
-    price: 8.49,
-    slug: "a-series-of-unfortunate-events-2-the-reptile-room",
-    isFeatured: true,
-    isBestSeller: true,
-  },
-  {
-    bookID: 16,
-    bookName: "The Secret",
-    bookCover: "/the-secret.jpg",
-    author: "Dan Brown",
-    releasedDate: 2003,
-    genres: ["Thriller", "Mystery"],
-    description:
-      "A symbologist unravels a conspiracy hidden in famous works of art.",
-    price: 8.49,
-    slug: "the-secret",
-    isFeatured: true,
-    isBestSeller: true,
-  },
-  {
-    bookID: 17,
-    bookName: "The Secret",
-    bookCover: "/the-secret.jpg",
-    author: "Dan Brown",
-    releasedDate: 2003,
-    genres: ["Thriller", "Mystery"],
-    description:
-      "A symbologist unravels a conspiracy hidden in famous works of art.",
-    price: 8.49,
-    slug: "the-secret",
-    isFeatured: true,
-    isBestSeller: true,
-  },
 ];

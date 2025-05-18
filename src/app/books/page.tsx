@@ -41,7 +41,7 @@ const MainBookPage = () => {
   // };
 
   if (isLoading) {
-    return <LoadingSpinner />;
+    return <LoadingSpinner size={50}/>;
   }
 
   return (

@@ -11,7 +11,7 @@ import { useReturnFocus } from "@/hooks/useReturnFocus";
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const toggleButtonRef = useRef<HTMLElement>(null);
+  const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
   const toggleMobile = () => setMobileOpen((prev) => !prev);
   const closeMobile = () => setMobileOpen(false);
