@@ -8,7 +8,6 @@ import { NavBarConfig } from '@/config/navBarConfig';
 import { useEscapeToClose } from "@/hooks/useEscapeToClose";
 import { useReturnFocus } from "@/hooks/useReturnFocus";
 
-
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
@@ -25,10 +24,12 @@ const NavBar = () => {
     <motion.header
       className="relative bg-amber-500 text-black shadow-2xl dark:text-black dark:bg-amber-400 dark:shadow-none"
       aria-label="Main Navigation"
+      role="menu"
     >
       <div className="container mx-auto max-w-7xl flex justify-between items-center px-6 py-4">
         {/* Logo or Brand Name */}
         <Link
+          role="menuitem"
           href="/"
           className="text-4xl uppercase font-bold hover:text-orange-500
           transition-all duration-300"
@@ -65,4 +66,4 @@ const NavBar = () => {
 };
 
 // Memoizing NavBar for performance optimization
-export default NavBar;
+export default React.memo(NavBar);

@@ -1,28 +1,23 @@
-// components/BookImage.tsx
 import Image from 'next/image';
-import React from 'react';
 
-const BookImage = ({
-  src,
-  alt,
-  width = 200,
-  height = 600,
-  label
-} : {
+interface Props {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
-  label?: string
-}) => (
+  onClick?: () => void;
+}
+
+const BookCardImage = ({ src, alt, onClick }: Props) => (
   <Image
     src={src}
     alt={alt}
-    width={width}
-    height={height}
-    className="w-full max-w-md h-auto object-cover rounded-lg shadow-lg mb-6"
-    aria-label={label}
-  />
+    width={200}
+    height={600}
+    className="w-full h-64 object-cover rounded-[20px] mb-2"
+    onClick={onClick}
+    draggable
+    loading='lazy'
+  /> 
+  // 
 );
 
-export default BookImage;
+export default BookCardImage;

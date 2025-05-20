@@ -27,4 +27,4 @@ const BookCardContentBox = ({ book }: { book: Book }) => {
   )
 }
 
-export default BookCardContentBox
+export default React.memo(BookCardContentBox);

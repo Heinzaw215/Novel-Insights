@@ -2,11 +2,20 @@
 
 import React from 'react';
 import useLoading from '@/hooks/isLoading';
-import BookList from '@/components/BookCard/BookList';
 import { BooksData } from '@/data/bookData';
 import { LoadingSpinner } from '@/components/misc';
-import SectionHeader from '@/components/SectionHeader';
+import dynamic from 'next/dynamic';
 // import BookFilter from '@/components/BookCard/BookFilter';
+
+const BookList = dynamic(() => import("@/components/BookCard/BookList"), {
+  loading: () => <LoadingSpinner />,
+  ssr: false
+})
+
+const SectionHeader = dynamic(() => import('@/components/SectionHeader'), {
+  loading: () => <div className="text-yellow-300">Loading header...</div>,
+  ssr: false,
+});
 
 const MainBookPage = () => {
   const isLoading = useLoading(1000);
@@ -41,7 +50,7 @@ const MainBookPage = () => {
   // };
 
   if (isLoading) {
-    return <LoadingSpinner size={50}/>;
+    return <LoadingSpinner size={50} />;
   }
 
   return (

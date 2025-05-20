@@ -2,6 +2,7 @@ import React from "react";
 import { NavBarItems } from "@/config/navBarConfig";
 import { FocusTrap } from "focus-trap-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface MobileMenuProps {
   id: string;
@@ -16,6 +17,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
   onClose,
   className = "",
 }) => {
+  const pathname = usePathname();
+  
   return (
     <FocusTrap
       active={isOpen}
@@ -34,22 +37,17 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         `}
         role="dialog"
         aria-modal="true"
-        aria-labelledby={`${id}-heading`}
+        aria-label="Mobile Menu"
       >
         <nav className="bg-amber-700" aria-label="Mobile Navigation">
           <ul className="flex flex-col divide-amber-700">
             {NavBarItems.map(({ id, label, href }) => (
               <li key={id}>
-                <Link href={href} legacyBehavior>
-                  <a
-                    onClick={onClose}
-                    className={`block px-6 py-3 text-lg ${id % 2 === 0
-                        ? "bg-amber-400 text-black hover:text-amber-200"
-                        : "bg-amber-600 text-white hover:text-amber-300"
-                      }`}
-                  >
-                    {label}
-                  </a>
+                <Link href={href} onClick={onClose}
+                  className={`block px-6 py-3 text-lg ${id % 2 === 0
+                    ? "bg-amber-400 text-black hover:text-amber-200"
+                    : "bg-amber-600 text-white hover:text-amber-300"
+                    }`}>{label}
                 </Link>
               </li>
             ))}
@@ -60,4 +58,4 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
   );
 };
 
-export default MobileMenu;
+export default React.memo(MobileMenu);

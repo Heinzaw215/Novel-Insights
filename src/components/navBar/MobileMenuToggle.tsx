@@ -18,6 +18,8 @@ const MobileMenuToggle= forwardRef<HTMLButtonElement,MobileMenuToggleProps> (
         className={`md:hidden focus:outline-none focus:ring-2 focus:ring-amber-800 focus:ring-offset-2 focus:ring-offset-amber-200 rounded-md p-2 bg-amber-600 hover:bg-amber-700 transition duration-200 ease-in-out ${className}`}
         onClick={onClick}
         aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
+        aria-expanded={isOpen}
+        aria-controls="mobile-menu"
         title={isOpen ? "Close menu" : "Open menu"}
         {...props}
       >

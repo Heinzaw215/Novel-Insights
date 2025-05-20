@@ -36,4 +36,4 @@ const BookReviewList: React.FC<BookReviewListProps> = ({ reviews }) => {
   );
 };
 
-export default BookReviewList;
+export default React.memo(BookReviewList);

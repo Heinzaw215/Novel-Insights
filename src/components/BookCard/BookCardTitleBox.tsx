@@ -1,9 +1,15 @@
 import React from 'react';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
-import { Book } from '@/schemas/book';
+import { Review } from '@/schemas/reviews';
 
-const BookCardBox = ({ book }: { book: Book }) => {
-  const { bookName, price, genres, reviews } = book;
+interface Props {
+  bookName: string,
+  price: number,
+  genres: Array<string>
+  reviews: Review
+}
+
+const BookCardBox = ({ bookName,price,genres,reviews }: Props) => {
 
   // Calculate average rating from reviews
   const averageRating =
@@ -47,4 +53,4 @@ const BookCardBox = ({ book }: { book: Book }) => {
   );
 };
 
-export default BookCardBox;
+export default React.memo(BookCardBox);
