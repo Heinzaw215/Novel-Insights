@@ -23,7 +23,7 @@ const BookCardBox = ({ bookName,price,genres,reviews }: Props) => {
   return (
     <section className='flex flex-col my-4'>
       <div className='flex items-center gap-x-1 p-2 bg-neutral-300 rounded-t-[20px]'>
-        <h2 className={`font-extrabold italic text-gray-800 w-2/3 text-left line-clamp-3 ${bookName?.length > 20 ? "text-[1.25rem]" : "text-[2rem]"}`}>
+        <h2 role='heading' className={`font-extrabold italic text-gray-800 w-2/3 text-left line-clamp-3 ${bookName?.length > 20 ? "text-[1.25rem]" : "text-[2rem]"}`}>
           {bookName}
         </h2>
 

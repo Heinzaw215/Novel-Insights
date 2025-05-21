@@ -32,7 +32,7 @@ const ContactFormDark = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="max-w-xl mx-auto p-6 rounded-2xl shadow-lg bg-[#1F1A17] text-[#F3EDE4] space-y-6 border border-[#3C322C]"
     >
-      <h2 className="text-2xl font-bold text-[#D3A762]">📬 Contact Us</h2>
+      <h2 role='heading' className="text-2xl font-bold text-[#D3A762]">📬 Contact Us</h2>
 
       <div>
         <label className="block text-sm mb-1" htmlFor="username">

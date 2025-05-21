@@ -5,20 +5,15 @@ import DefaultCTA from '../BookCard/DefaultCTA';
 import GradientOverlay from '../misc/GradientOverlay';
 import { landingConfig } from "@/config/landingPageConfig";
 import { motion } from 'framer-motion';
-// import BookList from "@/data/bookData";
-
-
-// export async function getStaticProps() {
-//   return {
-//     props: { books: BookList } 
-//   }
-// }
 
 const { title, subtitle } = landingConfig.default;
 
 const LandingPage = () => {
   return (
-    <main className="bg-gray-100 dark:bg-gray-800 shadow-md">
+    <main
+      aria-label='Landing Page Main Section'
+      className="bg-gray-100 dark:bg-gray-800 shadow-md"
+    >
       <div className="image-wrapper relative">
         <GradientOverlay
           as='div'
@@ -29,7 +24,7 @@ const LandingPage = () => {
         />
 
         <motion.div
-          className="text-overlay relative p-2"
+          className="text-overlay relative p-2 text-yellow-200"
           initial={{ opacity: 0.25, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}

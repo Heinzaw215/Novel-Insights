@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 
 const FooterBottom = () => (
   <section 
@@ -26,4 +27,4 @@ const FooterBottom = () => (
   </section>
 );
 
-export default FooterBottom;
+export default React.memo(FooterBottom);

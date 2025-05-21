@@ -1,31 +1,27 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
+"use client"
+import { useState, useEffect } from "react";
 import { LandingPage, HomePage } from "@/components/layout";
-import LoadingSpinner from "@/components/misc/LoadingSpinner";
+
+// export async function getStaticProps() {
+//   // Replace with your actual data fetching logic
+//   const books = await fetchBooks();
+
+//   return {
+//     props: { books },
+//     revalidate: 60, // re-generate the page every 60 seconds
+//   };
+// }
 
 export default function Home() {
   const [isNewUser, setIsNewUser] = useState<boolean | null>(null);
 
   useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisited");
-
-    if (hasVisited) {
-      setIsNewUser(true); // #TODO: Change later to false
-    } else {
-      localStorage.setItem("hasVisited", "true");
-      setIsNewUser(true);
-    }
+    const visited = localStorage.getItem("visited");
+    setIsNewUser(!visited);
+    if (!visited) localStorage.setItem("visited", "true");
   }, []);
 
-  // Don’t render anything until we know if user is new or not
-  if (isNewUser === null) {
-    return <LoadingSpinner />; // or a loading spinner if you want
-  }
+  if (isNewUser === null) return null; // or a loading spinner
 
-  return (
-    <div>
-      <LandingPage />
-      {/* <HomePage /> */}
-    </div>);
-};
+  return isNewUser ? <LandingPage /> : <HomePage />;
+}

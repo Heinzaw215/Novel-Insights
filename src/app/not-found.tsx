@@ -13,7 +13,7 @@ const NotFoundPage = () => {
         <div className=" flex flex-col justify-center relative">
 
           {/* Not Found Page Title */}
-          <h1 className="text-5xl mb-3 font-bold tracking-tight text-neutral-200 drop-shadow-lg shadow-neutral-300 leading-relaxed animate-fade-in text-center">
+          <h1 role='heading' className="text-5xl mb-3 font-bold tracking-tight text-neutral-200 drop-shadow-lg shadow-neutral-300 leading-relaxed animate-fade-in text-center">
             {title}
           </h1>
 

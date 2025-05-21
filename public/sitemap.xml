@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://novel-insight.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Books list page -->
+  <url>
+    <loc>https://novel-insight.com/books</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Example book detail -->
+  <url>
+    <loc>https://novel-insight.com/books/harry-potter</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Reviews page -->
+  <url>
+    <loc>https://novel-insight.com/reviews</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About page -->
+  <url>
+    <loc>https://novel-insight.com/about</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Login page -->
+  <url>
+    <loc>https://novel-insight.com/login</loc>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

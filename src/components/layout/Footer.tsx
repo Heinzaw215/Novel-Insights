@@ -1,17 +1,16 @@
-import {
-  FooterAbout,
-  FooterContact,
-  FooterSocial,
-  FooterBottom,
-} from '@/components/Footer';
-
 import { aboutText, contactItems, socialLinks } from '@/config/footerConfig';
 import React from 'react';
+import dynamic from 'next/dynamic';
+
+const FooterAbout = dynamic(() => import('@/components/Footer/FooterAbout'));
+const FooterContact = dynamic(() => import('@/components/Footer/FooterContact'));
+const FooterSocial = dynamic(() => import('@/components/Footer/FooterSocial'));
+const FooterBottom = dynamic(() => import('@/components/Footer/FooterBottom'));
 
 const Footer = () => {
   return (
     <footer
-      className="bg-gradient-to-br from-amber-500 via-orange-400 to-yellow-300 text-gray-900 pt-4 px-2 shadow-inner"
+      className="bg-gradient-to-br from-amber-500 via-orange-400 to-amber-400 text-gray-900 pt-4 px-2 shadow-inner"
       role="contentinfo"
     >
       <div className="container mx-full px-4">

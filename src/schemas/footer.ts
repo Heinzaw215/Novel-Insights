@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons';
 
-type FooterAboutProps = {
+export type FooterAboutProps = {
   title: string;
   content: string;
 };
@@ -11,7 +11,7 @@ type ContactItem = {
   link: string;
 };
 
-type FooterContactProps = {
+export type FooterContactProps = {
   title: string;
   contactItems: ContactItem[];
 };
@@ -23,7 +23,7 @@ type SocialItem = {
   link: string;
 };
 
-type FooterSocialProps = {
+export type FooterSocialProps = {
   title: string;
   socials: SocialItem[];
 };

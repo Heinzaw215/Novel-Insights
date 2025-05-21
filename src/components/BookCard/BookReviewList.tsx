@@ -9,7 +9,7 @@ const BookReviewList: React.FC<BookReviewListProps> = ({ reviews }) => {
 
   return (
     <div className="grid col-span-2 bg-white rounded-2xl shadow-lg px-4" id='reviews'>
-      <h2 className="text-3xl font-bold mb-2 underline">Reviews</h2>
+      <h2 role='heading' className="text-3xl font-bold mb-2 underline">Reviews</h2>
       {reviews.length > 0 ? (
         reviews.map((review, index) => (
           <div key={index} className="border-b border-gray-300 py-4">

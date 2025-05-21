@@ -1,0 +1,19 @@
+# Allow all crawlers
+User-agent: *
+Disallow: /
+
+# Allow everything
+Allow: /
+
+# Disallow sensitive or backend routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/
+
+# Optional: Disallow dev pages
+Disallow: /test-page/
+Disallow: /temp/
+
+# Point to your sitemap
+Sitemap: https://yourdomain.com/sitemap.xml

@@ -1,7 +1,7 @@
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 export const aboutText = `
-Welcome to our book review platform! Discover thoughtful reviews and curated recommendations to help you find your next favorite read.
+Novel Insights is a hub for book lovers. Discover new reads, share your reviews, and connect with fellow readers.
 `;
 
 export const contactItems = [

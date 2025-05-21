@@ -9,7 +9,7 @@ import BookCardBox from './BookCardTitleBox';
 const BookCardButtons = dynamic(() => import('./BookCardButtons'), { ssr: false });
 
 const BookCard = ({ book }: { book: Book }) => {
-  const { bookName, bookCover, author, releasedDate, description, slug } = book;
+  const { bookName, bookCover,price, genres, author, releasedDate, description, slug,reviews } = book;
 
   return (
     <article className="bg-white border-black rounded-xl p-3 max-w-md mx-auto shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-xl
@@ -19,7 +19,7 @@ const BookCard = ({ book }: { book: Book }) => {
       <BookCardImage src={bookCover} alt={bookName} onClick={() => console.log("Clicked")} />
 
       {/* BookCardBox includes title,price, rating, genres */}
-      <BookCardBox book={book} />
+      <BookCardBox bookName={bookName} price={price} genres={genres} reviews={reviews}  />
 
       {/* BookCard Author and Released Date */}
       <BookCardMeta author={author} releasedDate={releasedDate} />
