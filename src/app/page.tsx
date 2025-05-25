@@ -2,16 +2,6 @@
 import { useState, useEffect } from "react";
 import { LandingPage, HomePage } from "@/components/layout";
 
-// export async function getStaticProps() {
-//   // Replace with your actual data fetching logic
-//   const books = await fetchBooks();
-
-//   return {
-//     props: { books },
-//     revalidate: 60, // re-generate the page every 60 seconds
-//   };
-// }
-
 export default function Home() {
   const [isNewUser, setIsNewUser] = useState<boolean | null>(null);
 
